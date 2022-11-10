@@ -15,14 +15,14 @@ body {
 }
 
 :root {
-    --gradient: linear-gradient(to right, #e2336b, #fcac46);
+    --gradient: linear-gradient(to right, #33b0e2, #b4aea8);
 }
 
 .sidebar {
     position: fixed;
     width: 300px;
     height: 100vh;
-    background: #cab4b4;
+    background: #afc0d4;
     padding: 20px;
     z-index: 2;
 }
@@ -39,7 +39,9 @@ body {
 }
 
 .logo img {
-    width: 100px;
+    margin-left: 0px;
+    width: 250px;
+    height: 20vh;
 }
 
 .profile {
@@ -86,6 +88,7 @@ body {
 .profile-img span {
     font-size: 0.938rem;
     font-weight: 400;
+    margin-bottom: 0.5rem;
 }
 
 .about {
@@ -151,6 +154,15 @@ body {
     justify-content: space-between;
 }
 
+.wrapper{
+    max-width: 500px;
+    margin: 150px auto;
+}
+.wrapper .search{
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 1px 5px 3px rgba(0, 0, 0,0,12);
+}
 .search {
     display: flex;
     align-items: center;
@@ -160,6 +172,51 @@ body {
     padding: 10px;
     border-radius: 10px;
 }
+.search .active input{
+    border-radius: 5px 5px 0 0;
+}
+/* .search .option-box{
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 280px;
+    overflow-y: auto;
+} */
+
+.search .active .option-box{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+} 
+
+ /* .option-box li{
+    list-style: none;
+    padding: 8px 12px;
+    display: none;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+} */
+.search .active .option-box li{ 
+    display: block;
+} 
+ .option-box li:hover{
+    background: #efefef;
+} 
+
+.search .icon{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 20px;
+    color: #644bff;
+    cursor: pointer;
+}
+
 
 .search input {
     border: none;
@@ -190,6 +247,7 @@ body {
     border-radius: 8px;
     background: var(--gradient);
     margin-left: 1rem;
+    margin-bottom: 1rem;
 }
 
 .header-content .button i {
@@ -261,4 +319,4 @@ body {
     border-radius: 50%;
     color: #fff;
     /* background: hsla(246, 100%, 67%, 0.9) */
-}
+} 
