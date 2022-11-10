@@ -2,11 +2,15 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+      margin: 0;
+      padding: 0;
+      
+  
   }
   .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(3, 14, 59, 0.7),rgba(44, 4, 49, 0.7)),url(iit-bhilai-04.jpg);
+    background-image: linear-gradient(rgba(67, 12, 113, 0.7),rgba(25, 0, 29, 0.7)),url(iit-bhilai-04.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -39,7 +43,7 @@ nav img{
     content: '';
     width: 0%;
     height: 2px;
-    background: #dd09e0;
+    background: #3e383e;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -49,7 +53,10 @@ nav img{
 }
   
   body {
-    background: linear-gradient(to right, #0c000b 0%, #012030 100%);
+    margin: 0;
+    padding: 0;
+    
+    background: linear-gradient(rgba(3, 14, 59),rgba(44, 4, 49));
     font-size: 12px;
   }
   
@@ -72,7 +79,7 @@ nav img{
   
   .screen {
     position: relative;
-    background: #c28ab9;
+    background: black;
     border-radius: 15px;
   }
   
@@ -132,7 +139,7 @@ nav img{
     height: 3px;
     margin-left: 2px;
     border-radius: 8px;
-    background: #999;
+    background: rgb(1, 37, 75);
   }
   
   .screen-body {
@@ -153,7 +160,7 @@ nav img{
     display: flex;
     flex-direction: column;
     position: relative;
-    color: #6c056d7e;
+    color: #af06b17e;
     font-size: 26px;
   }
   
@@ -165,7 +172,7 @@ nav img{
     bottom: -10px;
     width: 25px;
     height: 4px;
-    background: #88019a;
+    background: #1c0244;
   }
   
   .app-contact {
