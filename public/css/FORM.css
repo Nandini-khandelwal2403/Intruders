@@ -11,7 +11,8 @@
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(67, 12, 113, 0.7), rgba(25, 0, 29, 0.7)), url(iit-bhilai-04.jpg);
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    /* background-image: linear-gradient(rgba(67, 12, 113, 0.7), rgba(25, 0, 29, 0.7)), url(iit-bhilai-04.jpg); */
     background-position: center;
     background-size: cover;
     position: relative;
@@ -63,7 +64,8 @@ nav img {
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(rgba(3, 14, 59), rgba(44, 4, 49));
+    background-image: linear-gradient(120deg, #84bcdf 0%, #2972d8 100%);
+    /* background: linear-gradient(rgba(3, 14, 59), rgba(44, 4, 49)); */
     font-size: 12px;
 }
 
@@ -88,7 +90,7 @@ input {
 
 .screen {
     position: relative;
-    background: black;
+    background: rgb(117, 156, 180);
     border-radius: 15px;
 }
 
@@ -101,7 +103,7 @@ input {
     right: 20px;
     bottom: 0;
     border-radius: 15px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    box-shadow: 0 20px 40px rgba(234, 153, 153, 0.4);
     z-index: -1;
 }
 
@@ -109,7 +111,7 @@ input {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    background: #2e0125;
+    background: #406ea8;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -153,6 +155,7 @@ input {
 
 .screen-body {
     display: flex;
+    margin-bottom: 60px;
 }
 
 .screen-body-item {
@@ -169,7 +172,7 @@ input {
     display: flex;
     flex-direction: column;
     position: relative;
-    color: #af06b17e;
+    color: #57121d7e;
     font-size: 26px;
 }
 
@@ -229,7 +232,7 @@ input {
     border-bottom-color: #ddd;
 }
 
-.app-form-button {
+/* .app-form-button {
     background: none;
     border: none;
     color: #380336;
@@ -240,7 +243,43 @@ input {
 
 .app-form-button:hover {
     color: #460f38;
-}
+} */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .container .buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .container a {
+    padding: 15px 20px;
+    font: 13px "Montserrat", sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    margin: 1em;
+  }
+  .container a:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+.button3 {
+    color: white;
+    background-image: linear-gradient(120deg, #84bcdf 0%, #2972d8 100%);
+    /* background: linear-gradient(to right, rgba(107, 42, 159, 0.7), rgba(179, 33, 201, 0.7)); */
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+    margin-bottom: 0;
+    text-align: right;
+    width:90px;
+  }
+  
+  .button3:hover {
+    border-radius: 30px;
+  }
 
 .credits {
     display: flex;
