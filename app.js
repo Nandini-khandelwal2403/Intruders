@@ -52,6 +52,69 @@ app.get('/api/user/data', auth, async(req, res) => {
     }
 });
 
+app.post('/api/post/create', auth, async(req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    try {
+        const post = new Post({
+            user: req.user._id,
+            msg: req.body.msg,
+            time: req.body.time,
+            username: req.body.username,
+            name: req.body.name,
+        });
+        await post.save();
+        res.json(post);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+app.get('/api/post/get', auth, async(req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    try {
+        const posts = await Post.find({ user: req.user._id });
+        res.json(posts);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+app.get('/api/post/getall', auth, async(req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    try {
+        const posts = await Post.find();
+        res.json(posts);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+app.post('/api/post/incrementlikes', auth, async(req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    try {
+        const post = await Post.findOne({ _id: req.body.postid });
+        post.likecount = post.likecount + 1;
+        post.likes.push(req.user._id);
+        await post.save();
+        res.json(post);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+
 app.get('/login', auth, (req, res) => {
     if (req.isAuth) {
         res.redirect('/profile');
@@ -64,12 +127,12 @@ app.get('/home', (req, res) => {
     res.sendFile(__dirname + '/public/views/home.html');
 });
 
-app.get('/profile', auth, (req, res) => {
+app.get('/feed', auth, (req, res) => {
     if (!req.isAuth) {
         res.redirect('/login');
         return;
     }
-    res.sendFile(__dirname + '/public/views/profile2.html');
+    res.sendFile(__dirname + '/public/views/feed.html');
 });
 
 // app.get('/register', (req, res) => {

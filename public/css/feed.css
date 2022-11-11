@@ -12,8 +12,8 @@ body {
 
 #container {
     display: grid;
-    grid-template-columns: 60% auto;
-    grid-gap: 10%;
+    grid-template-columns: 40vw 20vw;
+    grid-gap: 10vw;
     align-items: flex-start;
     margin: auto;
     margin-top: 20px;
