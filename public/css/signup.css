@@ -8,6 +8,32 @@ html {
 
 .btn {
     border-radius: 0
+<<<<<<< HEAD
+  }
+  
+  
+  
+  .btn-larger {
+      padding: 15px 40px !important;
+      border:2px solid  #8e279e !important;;
+      border-radius: 0px !important;
+      text-transform: uppercase;
+      font-family: 'Dosis', sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      color:  #8f419b;
+      background-color: transparent;
+      -webkit-transition: all .6s;
+      -moz-transition: all .6s;
+      transition: all .6s;
+    
+  
+  }
+  .btn-larger:hover, .btn-larger:focus, .btn-larger:active, .btn-larger.active, .open .dropdown-toggle.btn-larger {
+      border-color:   #320c38;
+      color: #fff;
+      background-color:  #320c38;
+=======
 }
 
 .btn:focus,
@@ -15,6 +41,7 @@ html {
 .btn.active,
 .btn:active:focus {
     outline: 0;
+>>>>>>> d1a90ee5d6cdea21c7336b211c96f74b5e50ed12
     border-radius: 0
 }
 
