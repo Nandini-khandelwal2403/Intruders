@@ -6,7 +6,8 @@ const http = require('http');
 const https = require('https');
 
 const { connectDB, conn } = require('./src/db/connection');
-const user = require('./src/db/user')
+const User = require('./src/db/user');
+const Post = require('./src/db/posts');
 var bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
@@ -37,6 +38,19 @@ app.post('/api/user/login', LoginUser);
 
 app.get('/api/user/auth', auth, getUserDetails);
 app.get('/api/user/logout', auth, LogoutUser);
+
+app.get('/api/user/data', auth, async(req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    try {
+        const user = await User.findOne({ number: req.user.number }, '-password');
+        res.json(user);
+    } catch (error) {
+        console.log(error);
+    }
+});
 
 app.get('/login', auth, (req, res) => {
     if (req.isAuth) {

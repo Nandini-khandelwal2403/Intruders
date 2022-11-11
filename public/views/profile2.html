@@ -35,8 +35,8 @@
                     </div>
                     <span class="profile-alert"></span>
                     <div class="profile-details text-center mt-2">
-                        <div class="name">Jhon Snow</div>
-                        <small class="role">King in the north</small>
+                        <div class="name" id="name">Jhon Snow</div>
+                        <small class="role" id="userid">King in the north</small>
                     </div>
                 </div>
             </div>
@@ -376,6 +376,29 @@
                         </div>
                     </div>
                 </div>
+                <template data-template="tweet-template">
+                    <div class="tweet">
+                        <div class="left">
+                            <img src="" class="profile-dp">
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <p class="profile-name"><span class="profile-id">@albusdumb</span></p>
+                                <time class="tweet-time"></time>
+                            </div>
+                            <div class="message">
+                                
+                                
+                            </div>
+                            <div class="btns">
+                                <button class="blue"><i class="far fa-comment"></i>12</button>
+                                <button class="green"><i class="fas fa-retweet"></i>45</button>
+                                <button class="red"><i class="far fa-heart"></i>73</button>
+                                <button class="blue"><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </template>
                 <footer>
                     <i class="fab fa-twitter"></i>
                     <button>Load More</button>
@@ -521,7 +544,9 @@
             </div>
         </div>
         <!-- <script src="../js/suggestion.js"></script> -->
-        <script src="../js/search.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js" integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="../js/feed.js"></script>
 </body>
 
 </html>
