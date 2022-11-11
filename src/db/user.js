@@ -34,12 +34,15 @@ const user = new mongoose.Schema({
         trim: true,
         maxlength: 100
     },
-    // contacts: {
-    //     type: Array,
-    // },
-    // messages: {
-    //     type: Array,
-    // },
+    followers: {
+        type: Array,
+    },
+    following: {
+        type: Array,
+    },
+    posts: {
+        type: Array,
+    },
     token: {
         type: String
     },

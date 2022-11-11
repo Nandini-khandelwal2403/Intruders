@@ -12,13 +12,14 @@
         <div class="nav-links" id="navLiks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
-                <li><a href="home">HOME</a></li>
-                <li><a href="profile">PROFILE</a></li>
+                <li><a href="/home">HOME</a></li>
+                <li><a href="/feed">PROFILE</a></li>
                 <li><a href="">ABOUT</a></li>
                 <li><a href="">CALENDAR</a></li>
                 <li><a href="">T&P CELL BLOGS</a></li>
                 <li><a href="">MAP</a></li>
                 <li><a href="/complaints">COMPLAINTS</a></li>
+
             </ul>
         </div>
     </nav>
@@ -42,7 +43,7 @@
                 <div class="screen-body">
                     <div class="screen-body-item left">
                         <div class="app-title">
-                            <form action="" method="post" onsubmit="return false" name="details">
+                            <form action="" method="post" onsubmit="return false" name="details" class="form-reset">
                                 <span>WE ARE HERE TO HELP YOU !!<br><br> </span>
                                 <span>DROP YOUR COMPLAINTS HERE :)</span>
                         </div>
@@ -65,10 +66,10 @@
                                 <select name="submitComplaint[type]" id="submitComplaint_type" class="app-form-control app-form-group">
                                 <option selected class="app-form-control app-form-group dropdown">Choose Complaint Type</option>
                                 <!-- <option></option> -->
-                                  <option value="Hostel Issues/Staff" class="app-form-control app-form-group" style="color: #888;">Hostel Issues/Staff</option>
-                                  <option value="Mess Food/Staff" class="app-form-control app-form-group dropdown">Mess Food/Staff</option>
-                                  <option value="Campus" class="app-form-control app-form-group dropdown">Campus</option>
-                                  <option value="Faculty/Staff Issues" class="app-form-control app-form-group dropdown">Faculty/Staff Issues</option>
+                                  <option value="Hostel Issues/Staff" class="app-form-control app-form-group" style="color: rgb(92, 92, 92);">Hostel Issues/Staff</option>
+                                  <option value="Mess Food/Staff" class="app-form-control app-form-group" style="color: rgb(92, 92, 92);">Mess Food/Staff</option>
+                                  <option value="Campus" class="app-form-control app-form-group" style="color: rgb(92, 92, 92);">Campus</option>
+                                  <option value="Faculty/Staff Issues" class="app-form-control app-form-group" style="color: rgb(92, 92, 92);">Faculty/Staff Issues</option>
                               </select>
                             </div>
 
@@ -77,13 +78,12 @@
                             </div>
 
                             <!-- <div class="app-form-group buttons">
-                                <button class="app-form-button">CANCEL</button>
-                                <button class="app-form-button" onclick="complainForm()">SEND</button>
-                                <div class="buttons">
-                            </div> -->
+                            <button class="app-form-button" onclick="complainForm()">SEND</button>
+                        </div> -->
+
                             <div class="container">
                                 <div class="buttons app-form-group">
-                                    <a href="#" class="button3" target="_blank" rel="noopener" onclick="complainForm()">Send</a>
+                                    <a href="#" class="button3" onclick="complainForm()">Send</a>
                                 </div>
                             </div>
                             

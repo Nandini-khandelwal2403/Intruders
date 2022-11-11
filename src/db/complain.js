@@ -17,7 +17,6 @@ const complainBox = new mongoose.Schema({
         type: String,
         required: [true, 'The enroll field is required!'],
         trim: true,
-        unique: 1
     },
     type: {
         type: String,
