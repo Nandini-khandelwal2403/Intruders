@@ -6,6 +6,7 @@ const http = require('http');
 const https = require('https');
 
 const { connectDB, conn } = require('./src/db/connection');
+const Complain = require('./src/db/complain')
 const User = require('./src/db/user');
 const Post = require('./src/db/posts');
 var bodyParser = require('body-parser');
@@ -31,7 +32,7 @@ const io = socketio(server);
 connectDB();
 
 const { auth } = require('./src/middleware/auth')
-const { RegisterUser, LoginUser, LogoutUser, getUserDetails } = require('./src/controller/auth_controller');
+const { RegisterUser, LoginUser, LogoutUser, getUserDetails, complainUser } = require('./src/controller/auth_controller');
 
 app.post('/api/user/register', RegisterUser);
 app.post('/api/user/login', LoginUser);
@@ -114,6 +115,11 @@ app.post('/api/post/incrementlikes', auth, async(req, res) => {
     }
 });
 
+app.post('/api/user/complain', complainUser);
+
+app.get('/complaints', (req, res) => {
+    res.sendFile(__dirname + '/public/views/form.html');
+})
 
 app.get('/login', auth, (req, res) => {
     if (req.isAuth) {
