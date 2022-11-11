@@ -1,108 +1,98 @@
 <html>
 
 <head>
-  <title>Complaints</title>
-  <script>function Val() {
-      if (document.details.NAME.value == "") {
-        alert("Please provide your Name!");
-        document.details.NAME.focus();
-        return false;
-      }
-      if (document.details.EMAIL.value == "") {
-        alert("Please enter a valid Email  ");
-        document.details.EMAIL.focus();
-        return false;
-      }
-      if (document.details.ENROLLMENT.value == "") {
-        alert("Please provide your Enrollment no");
-        document.details.ENROLLMENT.focus();
-        return false;
-      }
-      if (document.details.MSGS.value == "") {
-        alert("Please tell us about your complaints");
-        document.details.MSGS.focus();
-        return false;
-      }
-
-      return (true);
-    }
-  </script>
-  <link rel="stylesheet" href="../css/FORM.css">
+    <title>Complaints</title>
+    <link rel="stylesheet" href="../css/form.css">
 </head>
 
 <body>
-  
+
     <nav>
-        <a href="home.html"><img src="logo.jpeg" alt="IIT-Bhilai" width="100" height="100"></a>
+        <a href="home.html"><img src="../images/logo.jpeg" alt="IIT-Bhilai" width="100" height="100"></a>
         <div class="nav-links" id="navLiks">
             <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
-              <li><a href="home.html">HOME</a></li>
-              <li><a href="sign.html">PROFILE</a></li>
-              <li><a href="">ABOUT</a></li>
-              <li><a href="">CALENDAR</a></li>
-              <li><a href="">T&P CELL BLOGS</a></li>
-              <li><a href="">MAP</a></li>
-              <li><a href="FORM.html">COMPLAINTS</a></li>
+                <li><a href="home">HOME</a></li>
+                <li><a href="profile">PROFILE</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">CALENDAR</a></li>
+                <li><a href="">T&P CELL BLOGS</a></li>
+                <li><a href="">MAP</a></li>
+                <li><a href="/complaints">COMPLAINTS</a></li>
             </ul>
         </div>
     </nav>
-  
-   
-  <div class="background">
-    <div class="container">
-      <div class="screen">
-        <div class="screen-header">
-          <div class="screen-header-left">
-            <div class="screen-header-button close"></div>
-            <div class="screen-header-button maximize"></div>
-            <div class="screen-header-button minimize"></div>
-          </div>
-          <div class="screen-header-right">
-            <div class="screen-header-ellipsis"></div>
-            <div class="screen-header-ellipsis"></div>
-            <div class="screen-header-ellipsis"></div>
-          </div>
-        </div>
-        <div class="screen-body">
-          <div class="screen-body-item left">
-            <div class="app-title">
-              <form action="" method="post" onsubmit="return(Val())" name="details">
-                <span>WE ARE HERE TO HELP YOU !!<br><br> </span>
-                <span>DROP YOUR COMPLAINTS HERE :)</span>
+
+
+    <div class="background">
+        <div class="container">
+            <div class="screen">
+                <div class="screen-header">
+                    <div class="screen-header-left">
+                        <div class="screen-header-button close"></div>
+                        <div class="screen-header-button maximize"></div>
+                        <div class="screen-header-button minimize"></div>
+                    </div>
+                    <div class="screen-header-right">
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                        <div class="screen-header-ellipsis"></div>
+                    </div>
+                </div>
+                <div class="screen-body">
+                    <div class="screen-body-item left">
+                        <div class="app-title">
+                            <form action="" method="post" onsubmit="return false" name="details">
+                                <span>WE ARE HERE TO HELP YOU !!<br><br> </span>
+                                <span>DROP YOUR COMPLAINTS HERE :)</span>
+                        </div>
+
+                    </div>
+                    <div class="screen-body-item">
+                        <div class="app-form">
+                            <div class="app-form-group">
+                                <input class="app-form-control com-name" name="NAME" placeholder="NAME">
+                            </div>
+                            <div class="app-form-group">
+                                <input class="app-form-control com-email" name="EMAIL" placeholder="EMAIL">
+                            </div>
+                            <div class="app-form-group">
+                                <input class="app-form-control com-enroll" name="ENROLLMENT" placeholder="ENROLLMENT NUMBER">
+                            </div>
+
+                            <div class="app-form-group" id="submitComplaint_form">
+                                <!-- <select class="js-example-placeholder-single js-states form-control"> -->
+                                <select name="submitComplaint[type]" id="submitComplaint_type" class="app-form-control app-form-group">
+                                <option selected class="app-form-control app-form-group dropdown">Choose Complaint Type</option>
+                                <!-- <option></option> -->
+                                  <option value="Hostel Issues/Staff" class="app-form-control app-form-group" style="color: #888;">Hostel Issues/Staff</option>
+                                  <option value="Mess Food/Staff" class="app-form-control app-form-group dropdown">Mess Food/Staff</option>
+                                  <option value="Campus" class="app-form-control app-form-group dropdown">Campus</option>
+                                  <option value="Faculty/Staff Issues" class="app-form-control app-form-group dropdown">Faculty/Staff Issues</option>
+                              </select>
+                            </div>
+
+                            <div class="app-form-group message">
+                                <input class="app-form-control com-problem" name="MSGS" placeholder="COMPLAIN">
+                            </div>
+
+                            <div class="app-form-group buttons">
+                                <!-- <button class="app-form-button">CANCEL</button> -->
+                                <button class="app-form-button" onclick="complainForm()">SEND</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    </form>
+
+                </div>
             </div>
-
-          </div>
-          <div class="screen-body-item">
-            <div class="app-form">
-              <div class="app-form-group">
-                <input class="app-form-control" name="NAME" placeholder="NAME">
-              </div>
-              <div class="app-form-group">
-                <input class="app-form-control" name="EMAIL" placeholder="EMAIL">
-              </div>
-              <div class="app-form-group">
-                <input class="app-form-control" name="ENROLLMENT" placeholder="ENROLLMENT NUMBER">
-              </div>
-              <div class="app-form-group message">
-                <input class="app-form-control" name="MSGS" placeholder="YOUR PROBLEMS">
-              </div>
-              <div class="app-form-group message">
-                <input class="app-form-control" name="MSGS" placeholder="YOUR SUGGESTIONS">
-              </div>
-              <div class="app-form-group buttons">
-                <button class="app-form-button">CANCEL</button>
-                <button class="app-form-button">SEND</button>
-              </div>
-            </div>
-
-          </div>
-          </form>
-
         </div>
-      </div>
     </div>
-  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js" integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="../js/form.js"></script>
+
 </body>
 
 </html>

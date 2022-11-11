@@ -81,3 +81,27 @@ exports.getUserDetails = (req, res) => {
             // contacts: req.user.contacts,
     });
 };
+
+exports.complainUser = async(req, res) => {
+    const com = new Complain(req.body);
+
+    await com.save((err, doc) => {
+        if (err) {
+            console.log(err);
+            return res.status(422).json({ errors: err })
+        } else {
+            const userData = {
+                name: doc.name,
+                enroll: doc.enroll,
+                number: doc.number,
+                type: doc.type,
+                complain: doc.complain
+            }
+            return res.status(200).json({
+                success: true,
+                message: 'Successfully Signed Up',
+                userData
+            })
+        }
+    });
+};

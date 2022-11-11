@@ -192,10 +192,15 @@ input {
 
 .app-form-group {
     margin-bottom: 15px;
+    color: #888;
 }
 
 .app-form-group.message {
     margin-top: 40px;
+}
+
+#dropdown {
+    color: #888;
 }
 
 .app-form-group.buttons {
