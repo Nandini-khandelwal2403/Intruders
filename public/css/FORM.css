@@ -11,7 +11,7 @@
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(67, 12, 113, 0.7), rgba(25, 0, 29, 0.7)), url(iit-bhilai-04.jpg);
+    background-image: linear-gradient(rgba(67, 12, 113, 0.7), rgba(25, 0, 29, 0.7)), url(../images/iit-bhilai-04.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -63,7 +63,7 @@ nav img {
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(rgba(3, 14, 59), rgba(44, 4, 49));
+    background: linear-gradient(rgb(183, 184, 194), rgba(44, 4, 49));
     font-size: 12px;
 }
 
@@ -88,7 +88,7 @@ input {
 
 .screen {
     position: relative;
-    background: black;
+    background: rgb(168, 163, 163);
     border-radius: 15px;
 }
 
@@ -109,7 +109,7 @@ input {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    background: #2e0125;
+    background: #413a6b;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -169,7 +169,7 @@ input {
     display: flex;
     flex-direction: column;
     position: relative;
-    color: #af06b17e;
+    color: #413a6b;
     font-size: 26px;
 }
 
@@ -195,12 +195,54 @@ input {
     color: #888;
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container .buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.container a {
+    padding: 15px 20px;
+    font: 13px "Montserrat", sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    margin: 1em;
+}
+
+.container a:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.button3 {
+    color: white;
+    background: #413a6b;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+    margin-bottom: 0;
+    text-align: right;
+    width: 90px;
+}
+
+.button3:hover {
+    border-radius: 30px;
+}
+
 .app-form-group.message {
     margin-top: 40px;
 }
 
 #dropdown {
     color: #888;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .app-form-group.buttons {

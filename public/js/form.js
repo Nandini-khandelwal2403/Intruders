@@ -1,7 +1,7 @@
-$("#submitComplaint_type").on("change", function() {
-    $(".content-type-info").addClass("hide");
-    $("#" + $(this).val()).removeClass("hide");
-});
+// $("#submitComplaint_type").on("change", function() {
+//     $(".content-type-info").addClass("hide");
+//     $("#" + $(this).val()).removeClass("hide");
+// });
 
 
 function complainForm() {
@@ -25,7 +25,6 @@ function complainForm() {
         document.details.MSGS.focus();
         return false;
     }
-
     const name = document.querySelector(".com-name").value;
     const email = document.querySelector(".com-email").value;
     const enroll = document.querySelector(".com-enroll").value;
@@ -41,5 +40,10 @@ function complainForm() {
         data: comObj
     }).then((res) => {
         console.log(res);
+        document.querySelector(".com-name").value = "";
+        document.querySelector(".com-email").value = "";
+        document.querySelector(".com-enroll").value = "";
+        document.querySelector("#submitComplaint_type").value = "Choose Complaint Type";
+        document.querySelector(".com-problem").value = "";
     })
 }
