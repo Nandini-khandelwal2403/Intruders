@@ -22,7 +22,7 @@ function login() {
     const password = document.querySelector("#password_log").value;
 
     const obj = { 'number': mobile, 'password': password };
-
+    console.log(obj);
     axios({
         method: 'post',
         url: location.protocol + '//' + location.host + '/api/user/login',
