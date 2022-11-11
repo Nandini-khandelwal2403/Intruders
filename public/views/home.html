@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="with=device-width,initial-scale=1.0">
 
-        <title>University Website Design</title>
-        <link rel="stylesheet" href="../css/home.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+<head>
+    <meta name="viewport" content="with=device-width,initial-scale=1.0">
+
+    <title>University Website Design</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-    <body>
-        <section class="header">
-            <nav> 
-                <a href="home.html"><img src="logo.jpeg" alt="IIT-Bhilai" width="100" height="100"></a>
-                    <div class="nav-links" id="navLinks">
-                    <i class="fa fa-times" onclick="hideMenu()"></i>
-                    <ul>
-                        <li><a href="home.html">HOME</a></li>
-                        <li><a href="sign.html">PROFILE</a></li>
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="">CALENDAR</a></li>
-                        <li><a href="">T&P CELL BLOGS</a></li>
-                        <li><a href="">MAP</a></li>
-                        <li><a href="FORM.html">COMPLAINTS</a></li>
-                    </ul>
-                </div>
-                <i class="fa fa-bars" onclick="showMenu()"></i>
-            </nav>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="home.html"><img src="../images/logo.jpeg" alt="IIT-Bhilai" width="100" height="100"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/home">HOME</a></li>
+                    <li><a href="/profile">PROFILE</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">CALENDAR</a></li>
+                    <li><a href="">T&P CELL BLOGS</a></li>
+                    <li><a href="">MAP</a></li>
+                    <li><a href="/form">COMPLAINTS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
 
         <div class="text-box">
             <h1>INDIAN INSTITUTE OF TECHNOLOGY, BHILAI</h1>
-            <p>Welcome to the Home page of IIT BHILAI.<br>
-               Click on the below button for login or signup . </p>
-            <a href="sign.html" class="hero-btn">Login / Sign-up </a>
-    </div>
-        </section>
+            <p>Welcome to the Home page of IIT BHILAI.<br> Click on the below button for login or signup . </p>
+            <a href="/login" class="hero-btn">Login / Sign-up </a>
+        </div>
+    </section>
 
 
 
@@ -43,14 +44,17 @@
     <!--Javascript for Toggle menu-->
     <script>
         var navLinks = document.getElementById("navLinks");
-        function showMenu(){
-            navLinks.style.right="0";
+
+        function showMenu() {
+            navLinks.style.right = "0";
         }
-        function hideMenu(){
-            navLinks.style.right="-200px"; 
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
         }
     </script>
 
 
-    </body>
+</body>
+
 </html>

@@ -29,5 +29,6 @@ function login() {
         data: obj
     }).then((res) => {
         console.log(res.data.userData);
+        window.location.href = location.protocol + '//' + location.host + '/profile';
     })
 }

@@ -38,20 +38,33 @@ app.post('/api/user/login', LoginUser);
 app.get('/api/user/auth', auth, getUserDetails);
 app.get('/api/user/logout', auth, LogoutUser);
 
-app.get('/login', (req, res) => {
+app.get('/login', auth, (req, res) => {
+    if (req.isAuth) {
+        res.redirect('/profile');
+        return;
+    }
     res.sendFile(__dirname + '/public/views/sign.html');
-})
+});
+
+app.get('/home', (req, res) => {
+    res.sendFile(__dirname + '/public/views/home.html');
+});
+
+app.get('/profile', auth, (req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    res.sendFile(__dirname + '/public/views/profile2.html');
+});
+
+// app.get('/register', (req, res) => {
+//     res.sendFile(__dirname + '/public/views/register.html');
+// })
 
 app.get('/', (req, res) => {
-        res.sendFile(__dirname + '/public/views/home.html');
-    })
-    // app.get('/register', (req, res) => {
-    //     res.sendFile(__dirname + '/public/views/register.html');
-    // })
-
-// app.get('/', (req, res) => {
-//     res.sendFile(__dirname + '/public/views/index.html');
-// });
+    res.redirect('/home');
+});
 
 server.listen(PORT, () => {
     console.log(`Express app listening to PORT ${PORT}`);
