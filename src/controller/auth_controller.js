@@ -10,8 +10,9 @@ exports.RegisterUser = async(req, res) => {
         } else {
             const userData = {
                 name: doc.name,
+                enroll: doc.enroll,
                 number: doc.number,
-                contacts: doc.contacts
+                email: doc.email
             }
             return res.status(200).json({
                 success: true,
@@ -41,6 +42,8 @@ exports.LoginUser = (req, res) => {
                                     userID: user._id,
                                     name: user.name,
                                     number: user.number,
+                                    enroll: user.enroll,
+                                    email: user.email,
                                     token: user.token
                                 }
                                 //saving token to cookie
@@ -73,6 +76,8 @@ exports.getUserDetails = (req, res) => {
         isAuthenticated: true,
         name: req.user.name,
         number: req.user.number,
-        contacts: req.user.contacts,
+        email: req.user.email,
+        enroll: req.user.enroll
+            // contacts: req.user.contacts,
     });
 };

@@ -1,12 +1,13 @@
-function log() {
+function register() {
+    console.log("Hello log start");
     const name = document.querySelector("#first_name").value;
     const enrollment_num = document.querySelector("#last_name").value;
     const email = document.querySelector("#email").value;
     const mobile = document.querySelector("#phone").value;
     const password = document.querySelector("#password").value;
-
-    const obj = { 'name': name, 'enroll': enrollment_num, 'emai': email, 'number': mobile, 'password': password };
-
+    console.log("Hello log");
+    const obj = { 'name': name, 'enroll': enrollment_num, 'email': email, 'number': mobile, 'password': password };
+    console.log(obj);
     axios({
         method: 'post',
         url: location.protocol + '//' + location.host + '/api/user/register',

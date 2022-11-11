@@ -114,15 +114,23 @@
         <div class="header">
             <!-- Search -->
             <div class="wrapper">
-                <div class="search">
+                <!-- <div class="search">
                     <a href="" target="_blank" hidden></a>
 
                     <input type="text" placeholder="Search">
                     <div class="option-box">
-                        <!-- JavaScript List is Inserted -->
+                        
                     </div>
                     <div class=icon><i class="ri-search-2-line"></i></div>
-                </div>
+                </div> -->
+                <form autocomplete="off">
+                    <div class="autocomplete" style="width:300px;">
+                        <input id="myInput" type="text" name="myCountry" placeholder="Search User">
+                    </div>
+                    <input type="submit">
+                </form>
+
+
             </div>
             <script src="../js/suggestion.js"></script>
             <script src="../js/search.js"></script>

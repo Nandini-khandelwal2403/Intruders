@@ -7,7 +7,7 @@
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(3, 14, 59, 0.7), rgba(44, 4, 49, 0.7)), url(iit-bhilai-04.jpg);
+    background-image: linear-gradient(rgba(3, 14, 59, 0.7), rgba(44, 4, 49, 0.7)), url(../Images/iit-bhilai-04.jpg);
     background-position: center;
     background-size: cover;
     position: relative;

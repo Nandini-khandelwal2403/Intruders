@@ -13,13 +13,13 @@ const user = new mongoose.Schema({
     },
     enroll: {
         type: String,
-        required: [true, 'The number field is required!'],
+        required: [true, 'The enroll field is required!'],
         trim: true,
         unique: 1
     },
     email: {
         type: String,
-        required: [true, 'The number field is required!'],
+        required: [true, 'The email field is required!'],
         trim: true,
         unique: 1
     },
@@ -34,12 +34,12 @@ const user = new mongoose.Schema({
         trim: true,
         maxlength: 100
     },
-    contacts: {
-        type: Array,
-    },
-    messages: {
-        type: Array,
-    },
+    // contacts: {
+    //     type: Array,
+    // },
+    // messages: {
+    //     type: Array,
+    // },
     token: {
         type: String
     },
