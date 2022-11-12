@@ -1,88 +1,122 @@
-body
-{
-    font-size: 15px;
-    line-height: 1.52;
-    color: red;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 400;
-    overflow-x: hidden;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-section-padding
-{
-    padding: 60px 0px;
-}
-.marb-35
-{
-    margin-bottom:35px;
-}
-.header-h
-{
-    font-size: 35px;
-    color:pink;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 300;
-}
-.header-p
-{
-    color: blue;
-    font-size: 16px;
-}
-#menu-flters ul li{
-    display:inline-block;
-    color: brown;
-    text-transform:capitalize;
-    letter-spacing: 1px;
-    margin-bottom: 40px;
-}
-#menu-flters ul li a 
-{
-    padding: 10px 20px;
-    font-size:14px;
-    color:green;
-    border-radius: 0px;
-    border: 1px solid orangered;
-    text-decoration: none;
-    cursor: pointer;
-}
-#menu-flters ul li 
-a.active ,#menu-flters  ul li a :hover
-{
-    background-color: aqua;
-    color:blueviolet;
-    border:1px solid tomato;
-}
-.menu-resturtant
-{
-    width: 50%;
-    float:left;
-    padding:15px;
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(126, 130, 143, 0.7), rgba(202, 188, 204, 0.7)), url(../images/indian.jpeg);
+    background-position: center;
+    background-size: cover;
     position: relative;
 }
-.menu-resturtant.menu-title
-{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: aquamarine;
+
+nav {
+    display: flex;
+    padding: 1% 4%;
+    justify-content: space-between;
+    align-items: flex-start;
 }
-.menu-resturtant.menu-line
-{
-    position: absolute;
-    bottom: 6px;
-    border-bottom: 1 px dotter rgba(0,0,0.3);
-    margin-left: 0.6rem;
-margin-right: 0.6rem;
+
+nav img {
+    width: 100px;
 }
-.menu-resturtant .menu-price
-{
-    font-weight: 600;
-    position: absolute;
-    right: 0;
-    top:0;
+
+.nav-links {
+    flex: 1;
+    text-align: right;
 }
-.menu-resturtant .menu-substitle
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 1% 8px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #dd09e0;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(3, 14, 59, 0.7), rgba(44, 4, 49, 0.7)), url(../images/food.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5s;
+}
+.food{
+    width: 1100px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.food-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card{
+    background: rgb(95, 118, 127);
+    margin: 10px 20px;
+    flex: 1 1 21rem   ;
+    box-shadow: 0 0 15px rgba(244, 237, 237, 0.4);
+    padding: 10px 20px;
+    border-radius: 12px 12px 12px 12px;
+
+}
+.card h4{
+     font-size: 1.3rem;
+     text-transform: uppercase;
+     margin: 10px 0;
+     color: aliceblue;
+}
+.card ul{
+    color: aliceblue;
+}
+h1
 {
-    display:block;
-    float:left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 50px;
+    background-color: rgba(214, 211, 219, 0.526);
+    margin-left: 320px;
+    width: 50%;
+    color: rgb(33, 70, 98);
     
+}
+table{
+    width: 20%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 12px 12px 12px 12px ;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(32,32,32,3);
+    margin-left: 100px;
+    background:  rgb(103, 130, 151);
+    text-align: center;
+    color: #fff;
+    
+}
+tr,td{
+    padding: 12px 15px;
+
 }

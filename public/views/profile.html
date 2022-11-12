@@ -5,290 +5,338 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="../css/profile.css">
     <!-- Remix Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
+    <link rel="stylesheet" href="../css/profile2.css">
+    <link rel="stylesheet" href="../css/profile-sidebar.css">
+    <link rel="stylesheet" href="../css/profile-right.css">
+
+
+    <title>Debajyoti Halder</title>
 </head>
 
 <body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <a href="#" class="logo">
-            <img src="../images/iit-bhilai.webp" alt="">
-        </a>
-        <!-- Profile Image -->
-        <div class="profile">
-            <div class="profile-img">
-                <img src="../images/Person.png" alt="">
+    <header>
+        <div class="wrapper">
+            <div class="top">
+                <img src="" class="">
+                <div class="user">
+                    <h2>Ian | Gibbu</h2>
+                    <p>@Gibbu_</p>
+                </div>
             </div>
-            <div class="name">
-                <h1>Anshit</h1>
-                <img src="../images/bluetick.png" alt="">
-            </div>
-            <span>CSE Branch</span>
-        </div>
-        <!-- Open Account -->
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-secondary active">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Private Account
-            </label>
-            <label class="btn btn-secondary">
-              <input type="radio" name="options" id="option2" autocomplete="off"> Open Account
-            </label>
-        </div>
-        <!-- About -->
-        <div class="about">
-            <!-- Box-1 -->
-            <div class="box">
-                <h3>54</h3>
-                <span>Uploads</span>
-            </div>
-            <!-- Box-2 -->
-            <div class="box">
-                <h3>14.4K</h3>
-                <span>Followers</span>
-            </div>
-            <!-- Box-3 -->
-            <div class="box">
-                <h3>14</h3>
-                <span>Following</span>
-            </div>
-        </div>
-        <!-- Menu -->
-        <div class="menu">
-            <a href="#" class="active">
-                <span class="icon">
-                    <i class="ri-function-line"></i>
-                </span> Feed
-            </a>
-            <a href="./home.html">
-                <span class="icon">
-                    <i class="ri-home-4-line"></i>
-                </span> Home
-            </a>
-            <!-- 11111 -->
-            <a href="#">
-                <span class="icon">
-                    <i class="ri-information-line"></i>
-                </span> About
-            </a>
-            <a href="#">
-                <span class="icon">
-                    <i class="ri-calendar-2-line"></i>
-                </span> Calendar
-            </a>
-            <a href="#">
-                <span class="icon">
-                    <i class="ri-user-location-line"></i>
-                </span> T&P Cell Blog
-            </a>
-            <a href="#">
-                <span class="icon">
-                    <i class="ri-map-pin-2-line"></i>
-                </span> Map
-            </a>
-            <a href="#">
-                <span class="icon">
-                    <i class="ri-thumb-down-line"></i>
-                </span> Complaints
-            </a>
-            <a href="#">
-                <span class="icon">
-                    <i class="ri-logout-circle-r-line"></i>
-                </span> Logout
-            </a>
-        </div>
-    </div>
-    <!-- Main Home -->
-    <div class="main-home">
-        <!-- Header -->
-        <div class="header">
-            <!-- Search -->
-            <div class="wrapper">
-                <!-- <div class="search">
-                    <a href="" target="_blank" hidden></a>
-
-                    <input type="text" placeholder="Search">
-                    <div class="option-box">
-                        
-                    </div>
-                    <div class=icon><i class="ri-search-2-line"></i></div>
-                </div> -->
-                <form autocomplete="off">
-                    <div class="autocomplete" style="width:300px;">
-                        <input id="myInput" type="text" name="myCountry" placeholder="Search User">
-                    </div>
-                    <input type="submit">
-                </form>
-
-
-            </div>
-
-            <!-- Content -->
-            <div class="header-content">
-                <i class="ri-notification-2-line"></i>
-                <i class="ri-mail-unread-line"></i>
-                <!-- Button -->
-                <a href="#" class="button">
-                    <i class="ri-add-circle-line"></i>
-                    <div class="button-text">Add Photos</div>
+            <div class="bottom">
+                <a href="#">
+                    <p>Tweets</p>
+                    <h3>3.6K</h3>
+                </a>
+                <a href="#">
+                    <p>Following</p>
+                    <h3>127</h3>
+                </a>
+                <a href="#">
+                    <p>Followers</p>
+                    <h3>24.3K</h3>
                 </a>
             </div>
         </div>
-        <!-- Cards -->
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </header>
+    <div class="wrapper d-flex h-100">
+        <aside class="sidebar h-100">
+            <div class="sidebar-section sidebar-header">
+                <div class="sidebar-logo text-center">
+                    <a href="#" class="text-light">What's up Sejbahar !</a>
+                </div>
+            </div>
+            <div class="sidebar-section sidebar-profile pt-4 pb-4">
+                <div class="profile-picture">
+                    <div class="picture-wrapper rounded-circle ml-auto mr-auto">
+                        <img src="" class="img-fluid profile-pic" alt="">
+                    </div>
+                    <span class="profile-alert"></span>
+                    <div class="profile-details text-center mt-2">
+                        <div class="name" id="name"></div>
+                        <small class="role" id="username"></small>
                     </div>
                 </div>
             </div>
-            <!-- Card-2 -->
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="sidebar-section sidebar-menu p-0">
+                <ul class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link rounded-0 active" id="menu-tab" data-toggle="tab" href="#menu" role="tab" aria-controls="menu" aria-selected="true">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-0" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab" aria-controls="notifications" aria-selected="false">
+                            <i class="far fa-bell"></i>
+                            <span class="nav-alert bg-danger"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-0" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">
+                            <i class="far fa-comment"></i>
+                            <span class="nav-alert bg-success"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-0" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">
+                            <i class="fas fa-cogs"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+
+                    <div class="tab-pane fade show active pt-3 pb-2" id="menu" role="tabpanel" aria-labelledby="menu-tab">
+                        <div class="tab-header text-uppercase p-2">
+                            Menu
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span class="menu-text flex-fill">Dashboard</span>
+                                    <span class="badge badge-pill badge-warning rounded-0">NEW</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="far fa-gem"></i>
+                                    <span class="menu-text flex-fill">Componenets</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="fa fa-chart-line"></i>
+                                    <span class="menu-text flex-fill">Charts</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="menu-text flex-fill">E-commerce</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="fa fa-globe"></i>
+                                    <span class="menu-text flex-fill">Maps</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="fa fa-calendar"></i>
+                                    <span class="menu-text flex-fill">Calendar</span>
+                                    <span class="badge badge-pill badge-primary rounded-0">BETA</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="fa fa-book"></i>
+                                    <span class="menu-text">Documentation</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade pt-3 pb-2" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
+                        <div class="tab-header text-uppercase p-2">
+                            Notifications
+                        </div>
+                        <ul>
+                            <li>
+                                <a class="p-2 d-flex align-items-center text-decoration-none" href="#">
+                                    <div class="icon">
+                                        <i class="fas fa-check text-center text-success border border-success"></i>
+                                    </div>
+                                    <div class="notification-content flex-fill overflow-hidden">
+                                        <div class="notification-detail text-nowrap text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                        <div class="notification-time">6 minutes ago</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="p-2 d-flex align-items-center text-decoration-none" href="#">
+                                    <div class="icon">
+                                        <i class="fas fa-exclamation-triangle text-center text-warning border border-warning"></i>
+                                    </div>
+                                    <div class="notification-content flex-fill overflow-hidden">
+                                        <div class="notification-detail text-nowrap text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                        <div class="notification-time">Yesterday</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="p-2 d-flex align-items-center text-decoration-none" href="#">
+                                    <div class="icon">
+                                        <i class="fas fa-exclamation text-center text-info border border-info"></i>
+                                    </div>
+                                    <div class="notification-content flex-fill overflow-hidden">
+                                        <div class="notification-detail text-nowrap text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                        <div class="notification-time">2 day ago</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="p-2 d-flex align-items-center text-decoration-none" href="#">
+                                    <div class="icon">
+                                        <i class="fas fa-times text-center text-danger border border-danger"></i>
+                                    </div>
+                                    <div class="notification-content flex-fill overflow-hidden">
+                                        <div class="notification-detail text-nowrap text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                        <div class="notification-time">A week ago</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-footer text-center">
+                            <a href="#" class="btn rounded-0 btn-block">View all notifications</a>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade pt-3 pb-2" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+                        <div class="tab-header text-uppercase p-2">
+                            Messages
+                        </div>
+                        <ul>
+                            <li>
+                                <a class="p-2 d-flex align-items-center text-decoration-none" href="#">
+                                    <div class="pic">
+                                        <img src="https://www.magic931.com.au/assets/docs/Jon_Snow.PNG?1543200080" alt="">
+                                    </div>
+                                    <div class="message-content flex-fill overflow-hidden">
+                                        <div class="message-title text-nowrap text-truncate">
+                                            Jhon Snow
+                                        </div>
+                                        <div class="message-detail text-nowrap text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="p-2 d-flex align-items-center text-decoration-none" href="#">
+                                    <div class="pic">
+                                        <img src="https://www.magic931.com.au/assets/docs/Jon_Snow.PNG?1543200080" alt="">
+                                    </div>
+                                    <div class="message-content flex-fill overflow-hidden">
+                                        <div class="message-title text-nowrap text-truncate">
+                                            Jhon Snow
+                                        </div>
+                                        <div class="message-detail text-nowrap text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="p-2 d-flex align-items-center text-decoration-none" href="#">
+                                    <div class="pic">
+                                        <img src="https://www.magic931.com.au/assets/docs/Jon_Snow.PNG?1543200080" alt="">
+                                    </div>
+                                    <div class="message-content flex-fill overflow-hidden">
+                                        <div class="message-title text-nowrap text-truncate">
+                                            Jhon Snow
+                                        </div>
+                                        <div class="message-detail text-nowrap text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="p-2 d-flex align-items-center text-decoration-none" href="#">
+                                    <div class="pic">
+                                        <img src="https://www.magic931.com.au/assets/docs/Jon_Snow.PNG?1543200080" alt="">
+                                    </div>
+                                    <div class="message-content flex-fill overflow-hidden">
+                                        <div class="message-title text-nowrap text-truncate">
+                                            Jhon Snow
+                                        </div>
+                                        <div class="message-detail text-nowrap text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-footer text-center">
+                            <a href="#" class="btn rounded-0 btn-block">View all messages</a>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade pt-3 pb-2" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                        <div class="tab-header text-uppercase p-2">
+                            Settings
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="far fa-user"></i>
+                                    <span class="flex-fill">Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="far fa-question-circle"></i>
+                                    <span class="flex-fill">Help</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center" onclick="changeDP()">
+                                    <i class="fas fa-cog"></i>
+                                    <span class="flex-fill">Settings</span>
+                                    <input type="file" id="pic-input" hidden/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="fas fa-power-off"></i>
+                                    <span class="flex-fill">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </aside>
+        <div id="timeline">
+
+            <div class="posts">
+
+            </div>
+
+
+            <template data-template="tweet-template">
+                    <div class="tweet">
+                        <div class="left">
+                            <img src="" class="profile-dp">
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <p class="profile-name"><span class="profile-id"></span></p>
+                                <time class="tweet-time"></time>
+                            </div>
+                            <div class="message tweet-text">
+                                <img src="" class="post-img">
+                                
+                            </div>
+                            <div class="btns">
+                                <button class="blue"><i class="far fa-comment"></i>12</button>
+                                <button class="green"><i class="fas fa-retweet"></i>45</button>
+                                <button class="red like-button"><i class="far fa-heart"></i><span class="like-count"></span></button>
+                                <button class="blue"><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
         </div>
-        <!-- Card-3 -->
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Card-4 -->
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Card-5 -->
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Card-6 -->
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Card-7 -->
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Card-8 -->
-            <div class="col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+        <!-- </div> -->
     </div>
 
-    <!-- Stories -->
-    <div class="stories-title">
-        <h1>Stories</h1>
-        <a href="#" class="button">
-            <i class="ri-play-circle-line"></i>
-            <div class="text">Watch All</div>
-        </a>
-    </div>
-    <!-- Stories Content -->
-    <div class="stories">
-        <!-- Stories 1 -->
-        <div class="stories-img color">
-            <img src="../images/Person.png" alt="">
-            <div class="add">+</div>
-        </div>
-        <!-- Stories 2 -->
-        <div class="stories-img">
-            <img src="../images/Person.png" alt="">
-        </div>
-        <!-- Stories 3 -->
-        <div class="stories-img">
-            <img src="../images/Person.png" alt="">
-        </div>
-        <!-- Stories 4 -->
-        <div class="stories-img">
-            <img src="../images/Person.png" alt="">
-        </div>
-        <!-- Stories 5 -->
-        <div class="stories-img">
-            <img src="../images/Person.png" alt="">
-        </div>
-        <!-- Stories 6 -->
-        <div class="stories-img">
-            <img src="../images/Person.png" alt="">
-        </div>
-        <!-- Stories 7 -->
-        <div class="stories-img">
-            <img src="../images/Person.png" alt="">
-        </div>
-        <!-- Stories 8 -->
-        <div class="stories-img">
-            <img src="../images/Person.png" alt="">
-        </div>
-        <!-- Stories 9 -->
-        <div class="stories-img">
-            <img src="../images/Person.png" alt="">
-        </div>
-        <!-- Stories 10 -->
-        <div class="stories-img">
-            <img src="../images/Person.png" alt="">
-        </div>
-    </div>
-    </div>
-    <!-- <script src="../js/suggestion.js"></script> -->
-    <script src="../js/search.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/profile.js"></script>
+
+
 </body>
 
 </html>

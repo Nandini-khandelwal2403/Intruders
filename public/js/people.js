@@ -15,7 +15,7 @@ Highcharts.chart('container', {
     chart: {
         backgroundColor: 'transparent',
         height: 600,
-        width: 1200,
+        // width: 1200,
         inverted: true
     },
 
@@ -31,6 +31,7 @@ Highcharts.chart('container', {
             ['COSA', 'COSA President'],
             ['COSA President', 'Events Head'],
             ['COSA President', 'Treasurer'],
+<<<<<<< HEAD
             // ['CEO', 'CPO'],
             // ['CEO', 'CSO'],
             // ['CEO', 'CMO'],
@@ -124,6 +125,56 @@ Highcharts.chart('container', {
             //     name: 'Marketing team'
             // }
         ],
+=======
+            // ['COSA President', 'S'],
+        ],
+        levels: [{
+                level: 0,
+                color: 'silver',
+                dataLabels: {
+                    color: 'black'
+                },
+                height: 25
+            }, {
+                level: 1,
+                color: 'silver',
+                dataLabels: {
+                    color: 'black'
+                },
+                height: 25
+            }, {
+                level: 2,
+                color: '#980104'
+            },
+            // {
+            //     level: 4,
+            //     color: '#359154'
+            // }
+        ],
+        nodes: [{
+            id: 'COSA'
+        }, {
+            id: 'COSA President',
+            title: 'COSA President',
+            name: 'Grethe',
+            image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132317/Grethe.jpg'
+        }, {
+            id: 'Events Head',
+            title: 'Events Head',
+            name: 'Anne Jorunn Fjærestad',
+            color: '#007ad0',
+            image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132314/AnneJorunn.jpg',
+            // column: 3,
+            // offset: '75%'
+        }, {
+            id: 'Treasurer',
+            title: 'CTO',
+            name: 'Christer Vasseng',
+            // column: 4,
+            image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12140620/Christer.jpg',
+            // layout: 'hanging'
+        }],
+>>>>>>> 9cca575859fb94a137cb045940a7967f773f1cf0
         colorByPoint: false,
         color: '#007ad0',
         dataLabels: {
