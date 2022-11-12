@@ -228,7 +228,7 @@ app.get('/emergency', (req, res) => {
 })
 
 app.get('/profile', (req, res) => {
-    res.sendFile(__dirname + '/public/views/personal.html');
+    res.sendFile(__dirname + '/public/views/profile.html');
 })
 
 app.get('/login', (req, res) => {
