@@ -3,11 +3,11 @@
     padding: 0;
 }
 .header {
-    min-height: 100vh;
+    /* min-height: 40vh; */
     width: 100%;
-    /* background-image: linear-gradient(rgba(3, 14, 59, 0.7), rgba(44, 4, 49, 0.7)), url(../images/iit-bhilai-04.jpg); */
+    background-image: linear-gradient(rgba(234, 236, 245, 0.7), rgba(246, 252, 255, 0.5)), url(../Images/iitbh1.jpeg);
     background-position: center;
-    background-size: cover;
+    background-size:cover;
     position: relative;
 }
 /* nav{
@@ -95,7 +95,7 @@ nav img {
 .text-box{
     width: 80%;
     color: rgb(12, 12, 15);
-    position: relative;
+    position:relative;
     top:50%;
     font-family: 'Times New Roman';
     left: 50%;
@@ -193,6 +193,7 @@ nav .fa{
 }
 
 .course{
+    position:relative;
     width: 80%;
     color: black;
     font-family: 'Times New Roman';
@@ -212,7 +213,7 @@ nav .fa{
     padding-bottom: 10px;
 }
 .course p{
-    font-weight: 300;
+    font-weight: 500;
     color: rgb(4, 0, 0);
     line-height: 10px;
     padding: 20px;

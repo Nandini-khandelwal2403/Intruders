@@ -31,6 +31,101 @@ Highcharts.chart('container', {
             ['COSA', 'COSA President'],
             ['COSA President', 'Events Head'],
             ['COSA President', 'Treasurer'],
+<<<<<<< HEAD
+            // ['CEO', 'CPO'],
+            // ['CEO', 'CSO'],
+            // ['CEO', 'CMO'],
+            // ['CEO', 'HR'],
+            // ['CTO', 'Product'],
+            // ['CTO', 'Web'],
+            // ['CSO', 'Sales'],
+            // ['CMO', 'Market']
+        ],
+        levels: [{
+            level: 0,
+            color: '#980104',
+            dataLabels: {
+                color: 'black'
+            },
+            height: 25
+        }, {
+            level: 1,
+            color: '#3822C9',
+            dataLabels: {
+                color: 'black'
+            },
+            height: 25
+        }, {
+            level: 2,
+            color: '#980104'
+        }, {
+            level: 4,
+            color: '#359154'
+        }],
+        nodes: [{
+                id: 'COSA'
+            },
+            // }, {
+            //     id: 'Board'
+            // },
+            // {
+            //     id: 'CEO',
+            //     title: 'CEO',
+            //     name: 'Grethe Hjetland',
+            //     image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132317/Grethe.jpg'
+            // },
+            {
+                id: 'COSA President',
+                title: 'HR/CFO',
+                name: 'Anne Jorunn Fjærestad',
+                color: '#007ad0',
+                image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132314/AnneJorunn.jpg',
+                column: 3,
+                offset: '75%'
+            }, {
+                id: 'Events Head',
+                title: 'CTO',
+                name: 'Christer Vasseng',
+                column: 4,
+                image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12140620/Christer.jpg',
+                layout: 'hanging'
+            }, {
+                id: 'Treasurer',
+                title: 'CPO',
+                name: 'Torstein Hønsi',
+                column: 4,
+                image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12131849/Torstein1.jpg'
+            }
+            // , {
+            //     id: 'CSO',
+            //     title: 'CSO',
+            //     name: 'Anita Nesse',
+            //     column: 4,
+            //     image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12132313/Anita.jpg',
+            //     layout: 'hanging'
+            // }, {
+            //     id: 'CMO',
+            //     title: 'CMO',
+            //     name: 'Vidar Brekke',
+            //     column: 4,
+            //     image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/13105551/Vidar.jpg',
+            //     layout: 'hanging'
+            // }, {
+            //     id: 'Product',
+            //     name: 'Product developers'
+            // }, {
+            //     id: 'Web',
+            //     name: 'General tech',
+            //     description: 'Web developers, sys admin'
+            // }, {
+            //     id: 'Sales',
+            //     name: 'Sales team'
+            // }, {
+            //     id: 'Market',
+            //     name: 'Marketing team'
+            // }
+        ],
+=======
             // ['COSA President', 'S'],
         ],
         levels: [{
@@ -79,6 +174,7 @@ Highcharts.chart('container', {
             image: 'https://wp-assets.highcharts.com/www-highcharts-com/blog/wp-content/uploads/2018/11/12140620/Christer.jpg',
             // layout: 'hanging'
         }],
+>>>>>>> 9cca575859fb94a137cb045940a7967f773f1cf0
         colorByPoint: false,
         color: '#007ad0',
         dataLabels: {
