@@ -57,6 +57,19 @@ app.get('/api/user/data', auth, async(req, res) => {
     }
 });
 
+app.get('/api/user/:id', auth, async(req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    try {
+        const user = await User.findOne({ number: req.params.id }, '-password');
+        res.json(user);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
 //creating bucket
 let bucket;
 mongoose.connection.on("connected", () => {
@@ -227,11 +240,15 @@ app.get('/emergency', (req, res) => {
 
 })
 
-app.get('/profile', (req, res) => {
+app.get('/profile', auth, (req, res) => {
+    res.redirect('/profile/' + req.user.number);
+})
+
+app.get('/profile/:id', (req, res) => {
     res.sendFile(__dirname + '/public/views/profile.html');
 })
 
-app.get('/login', auth, (req, res) => {
+app.get('/login', (req, res) => {
     if (req.isAuth) {
         res.redirect('/profile');
         return;

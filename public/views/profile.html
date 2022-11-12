@@ -5,455 +5,333 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="I'm a Ph.D. Candidate in the Dept. of Computer Science at Stony Brook University. I'm working jointly at the PACE Lab and the File systems and Storage Lab (FSL). I'm advised by Prof. Anshul Gandhi and Prof. Erez Zadok. My research interests span across Distributed Systems and Peer-to-peer Networks.">
-    <link rel="apple-touch-icon" sizes="180x180" href="../res/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../res/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../res/img/favicon-16x16.png">
-    <link rel="manifest" href="../res/img/site.webmanifest">
-    <link itemprop="image" href="../res/img/dp_min.png" />
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-    <!-- <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" /> -->
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.2/css/all.css" type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/profile.css">
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css">
+    <link rel="stylesheet" href="../css/profile2.css">
+    <link rel="stylesheet" href="../css/profile-sidebar.css">
+    <link rel="stylesheet" href="../css/profile-right.css">
+
 
     <title>Debajyoti Halder</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
-        <div class="container">
-            <!-- <a class="navbar-brand abs" href=".">
-                <img src="../res/img/dp_min.png" alt="" width="30" height="30" class="d-inline-block align-text-top rounded-circle" style="margin: -4px 10px 0 0;">
-                <span style="font-family: 'Ubuntu', sans-serif; font-size: 23px;">Debajyoti Halder</span>
-            </a>
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse" id="collapseNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#publications">Publications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#awards">Awards</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" onclick="getFile('cv.pdf', 'cv');" style="cursor: pointer;">Download CV</a>
-                    </li>
-                </ul>
-            </div> -->
-            <a href="home.html"><img src="./images/logo.jpeg" alt="IIT-Bhilai" width="100" height="100"></a>
-            <div class="nav-links" id="navLinks">
-                <!-- <i class="fa fa-times" onclick="hideMenu()"></i> -->
-                <ul>
-                    <li><a href="/home">HOME</a></li>
-                    <li><a href="/profile">PROFILE</a></li>
-                    <li><a href="/feed">FEED</a></li>
-                    <li><a href="/calender">CALENDAR</a></li>
-                    <li><a href="">T&P CELL BLOGS</a></li>
-                    <li><a href="/map">MAP</a></li>
-                    <li><a href="/about">ABOUT</a></li>
-                    <li><a href="/complaints">COMPLAINTS</a></li>
-                    <li>
-                        <a href="/emergency">EMERGENCY</a>
-                    </li>
-                    <li>
-                        <button type="button" class="btn">
-                             Log out
-                          </button>
-                    </li>
-                </ul>
-            </div>
-            <!-- <i class="fa fa-bars" onclick="showMenu()"></i> -->
-        </div>
-    </nav>
-    <div class="container center-content">
-
-        <div class="row details">
-            <div class="col-md-6 d-flex justify-content-center">
-                <img alt="User Image" src="./images/dp_min.png" class="home-dp" />
-            </div>
-            <div class="col-md-6 center-content-rel">
-                <div class="jumbotron">
-                    <h1 class="jumbo-name">
-                        DEBAJYOTI HALDER
-                    </h1>
-                    <h5 class="jumbo-details">
-                        8824207702 &nbsp;&nbsp; · &nbsp;&nbsp;
-                        <a>debajyoti.halder@stonybrook.edu</a>
-                         <br> CSE Branch &nbsp;&nbsp; · &nbsp;&nbsp; 3rd Year
-                    </h5>
-                    <br><br><br>
-                    <h4 class="jumbo-followers">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
-                        Followers &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;
-                        &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
-                        &nbsp;&nbsp;  &nbsp;&nbsp; &nbsp;&nbsp;  &nbsp;&nbsp;
-                        Following
-                    </h4>
-                    <h4>
-                        <div class="numbers number1">
-                            332
-                        </div>
-                        <div class="numbers number2">
-                            321
-                        </div>
-                    </h4>
-                    
-                            <!-- name email branch year programme phone number details to include -->
-                    <br>
-                    <!-- <p>
-                        I'm a Ph.D. Candidate in the Dept. of Computer Science at <a href="https://www.cs.stonybrook.edu/" target="_blank">Stony Brook University</a>. I'm working jointly at the <a href="https://www.pace.cs.stonybrook.edu/" target="_blank">PACE Lab</a>                        and the <a href="https://www.fsl.cs.stonybrook.edu/" target="_blank">File systems and Storage Lab (FSL)</a>. I'm advised by <a href="https://www3.cs.stonybrook.edu/~anshul/" target="_blank">Prof. Anshul Gandhi</a> and <a href="https://www3.cs.stonybrook.edu/~ezk/"
-                            target="_blank">Prof. Erez Zadok</a>. My research interests span across Distributed Systems and Peer-to-peer Networks.
-                    </p> -->
-                    <br>
-                    <!-- <p>
-                        I received B.Tech in Computer Science Engineering from the <a href="https://iitbhilai.ac.in/" target="_blank">Indian Institute of Technology (IIT) Bhilai</a> in 2022. I have previously worked as a part-time Software Engineer Intern
-                        for 2 years at <a href="https://dmlab.app/" target="_blank">DMLab, Chile</a>.
-                    </p> -->
-                    <br>
-                    <!-- <p class="jumbo-social social">
-                        <a href="https://orcid.org/0000-0001-9098-6106" target="_blank"><i class="fa-brands fa-orcid"></i></a>
-                        <a href="https://github.com/RotonEvan" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/debajyoti-halder/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://twitter.com/Debajyoti0901" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.facebook.com/roton.evan.0901" target="_blank"><i class="fab fa-facebook"></i></a>
-                    </p> -->
-
-
-                    <!-- <p>
-                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                    </p> -->
+    <header>
+        <div class="wrapper">
+            <div class="top">
+                <img src="" class="">
+                <div class="user">
+                    <h2>Ian | Gibbu</h2>
+                    <p>@Gibbu_</p>
                 </div>
+            </div>
+            <div class="bottom">
+                <a href="#">
+                    <p>Tweets</p>
+                    <h3>3.6K</h3>
+                </a>
+                <a href="#">
+                    <p>Following</p>
+                    <h3>127</h3>
+                </a>
+                <a href="#">
+                    <p>Followers</p>
+                    <h3>24.3K</h3>
+                </a>
             </div>
         </div>
-
-        <div class="row details" id="experience">
-            <div class="col-md-12">
-                <div class="card exp-card">
-                    <div class="card-body">
-                        <h3 class="card-title exp-title"> My Feeds</h3>
-                        <div id="content">
-                            <ul class="timeline">
-                                <li class="event" data-date="" data-date-mob="">
-                                    <!-- <h3>Research Fellowship from Arista Networks</h3>
-                                    <h4>Supervisor: Dr. Anand M. Baswade</h4> -->
-
-                                    <!-- <ul class="exp-details">
-                                        <li><b>Real-time IDS for WPA3:</b> A two stage architecture for real-time intrusion detection for an enterprise scenario.</li>
-                                        <li><b>Attacks on WPA3 testbed:</b> A new, open source dataset for attacks on WPA3-enabled device.</li>
-                                        <li><b>ML based IDS:</b> A lightweight ML-based classifier for attack detection with high accuracy in real-time.</li>
-                                        <li><b>IN REVIEW at GlobeCom ’22:</b> RIDS : Real-time Intrusion Detection System for WPA3 enabled Enterprise Networks - <a href="https://arxiv.org/abs/2207.02489" target="_blank">Preprint</a>.</li>
-                                    </ul> -->
-                                    <!-- <template data-template="tweet-template"> -->
-                                        <div class="tweet">
-                                            <div class="left">
-                                                <img src="" class="profile-dp">
-                                            </div>
-                                            <div class="right">
-                                                <div class="info">
-                                                    <p class="profile-name"><span class="profile-id">nandini</span></p>
-                                                    <time class="tweet-time">456</time>
-                                                </div>
-                                                <div class="message tweet-text">
-                                                    <img src="" class="post-img">
-                                                    
-                                                </div>
-                                                <div class="btns">
-                                                    <button class="blue"><i class="far fa-comment"></i>12</button>
-                                                    <button class="green"><i class="fas fa-retweet"></i>45</button>
-                                                    <button class="red like-button"><i class="far fa-heart"></i><span class="like-count"></span></button>
-                                                    <button class="blue"><i class="fas fa-ellipsis-h"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <!-- </template> -->
-                                    
-
-
-                                </li>
-                                <li class="event" data-date="" data-date-mob="">
-                                    <!-- <h3>Research on SDN in Satellite Networks</h3>
-                                    <h4>Supervisor: Dr. Anand M. Baswade</h4>
-
-                                    <ul class="exp-details">
-                                        <li><b>QoS aware routing:</b> Developed an algorithm better than Dijkstra to find the shortest as well as QoS aware route in a Satellite Network.</li>
-                                        <li><b>Protocols for flow rule transfer:</b> Developed protocols for flow rule transfer in SDN which ensure non-disruptive service during satellite handovers.</li>
-                                        <li><b>Visualizations:</b> fybrrLink Visualization Tool : <a href="https://fybrrlink-viztool.herokuapp.com/" target="_blank">fybrrLink-VizTool</a>.</li>
-                                        <li><b>ACCEPTED in IEEE TNSM:</b> fybrrLink: Efficient QoS-aware Routing in SDN enabled Future Satellite Networks - <a href="https://doi.org/10.1109/TNSM.2021.3129876" target="_blank">DOI</a>.</li>
-                                    </ul> -->
-                                    <!-- <template data-template="tweet-template"> -->
-                                        <div class="tweet">
-                                            <div class="left">
-                                                <img src="" class="profile-dp">
-                                            </div>
-                                            <div class="right">
-                                                <div class="info">
-                                                    <p class="profile-name"><span class="profile-id">nandini</span></p>
-                                                    <time class="tweet-time">456</time>
-                                                </div>
-                                                <div class="message tweet-text">
-                                                    <img src="" class="post-img">
-                                                    
-                                                </div>
-                                                <div class="btns">
-                                                    <button class="blue"><i class="far fa-comment"></i>12</button>
-                                                    <button class="green"><i class="fas fa-retweet"></i>45</button>
-                                                    <button class="red like-button"><i class="far fa-heart"></i><span class="like-count"></span></button>
-                                                    <button class="blue"><i class="fas fa-ellipsis-h"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <!-- </template> -->
-                                </li>
-                                <li class="event" data-date="" data-date-mob="">
-                                    <!-- <h3>Research on P2P Messaging</h3>
-                                    <h4>Project Lead</h4>
-
-                                    <ul class="exp-details">
-                                        <li><b>fybrrChat:</b> A Distributed Chat Application for Secure P2P Messaging.</li>
-                                        <li><b>Distributed technologies:</b> Secure and Instant Messaging using WebRTC and IPFS.</li>
-                                        <li><b>Comparison with WhatsApp:</b> fybrrChat is able to perform better than WhatsApp at even lesser cost of operation.</li>
-                                        <li><b>Website:</b> fybrrChat test version : <a href="https://fybrrchat-lite.web.app/" target="_blank">fybrrChat-lite</a>.</li>
-                                        <li><b>IN REVIEW at GlobeCom ’22:</b> fybrrChat: A Distributed Chat Application for Secure P2P Messaging - <a href="https://arxiv.org/abs/2207.02487" target="_blank">Preprint</a>.</li>
-                                    </ul> -->
-                                    <!-- <template data-template="tweet-template"> -->
-                                        <div class="tweet">
-                                            <div class="left">
-                                                <img src="" class="profile-dp">
-                                            </div>
-                                            <div class="right">
-                                                <div class="info">
-                                                    <p class="profile-name"><span class="profile-id">nandini</span></p>
-                                                    <time class="tweet-time">456</time>
-                                                </div>
-                                                <div class="message tweet-text">
-                                                    <img src="" class="post-img">
-                                                    
-                                                </div>
-                                                <div class="btns">
-                                                    <button class="blue"><i class="far fa-comment"></i>12</button>
-                                                    <button class="green"><i class="fas fa-retweet"></i>45</button>
-                                                    <button class="red like-button"><i class="far fa-heart"></i><span class="like-count"></span></button>
-                                                    <button class="blue"><i class="fas fa-ellipsis-h"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <!-- </template> -->
-                                </li>
-                                <li class="event" data-date="" data-date-mob="">
-                                    <!-- <h3>Research on P2P Live Streaming</h3>
-                                    <h4>Supervisor: Dr. Anand M. Baswade</h4>
-
-                                    <ul class="exp-details">
-                                        <li><b>fybrrStream:</b> A WebRTC based Efficient and Scalable P2P Live Streaming Platform.</li>
-                                        <li><b>Low latency:</b> WebRTC based low latency (0.01s) peer-to-peer live streaming.</li>
-                                        <li><b>Field test:</b> India-wide field test with 50+ participants spread across 3000+ km.</li>
-                                        <li><b>Website:</b> Experiment version : <a href="https://fybrrstream.herokuapp.com/" target="_blank">fybrrStream</a>.</li>
-                                        <li><b>ACCEPTED in ICCCN '21:</b> fybrrStream: A WebRTC based Efficient and Scalable P2P Live Streaming Platform - <a href="https://doi.org/10.1109/ICCCN52240.2021.9522198" target="_blank">DOI</a>.</li>
-                                    </ul> -->
-                                    <!-- <template data-template="tweet-template"> -->
-                                        <div class="tweet">
-                                            <div class="left">
-                                                <img src="" class="profile-dp">
-                                            </div>
-                                            <div class="right">
-                                                <div class="info">
-                                                    <p class="profile-name"><span class="profile-id">nandini</span></p>
-                                                    <time class="tweet-time">456</time>
-                                                </div>
-                                                <div class="message tweet-text">
-                                                    <img src="" class="post-img">
-                                                    
-                                                </div>
-                                                <div class="btns">
-                                                    <button class="blue"><i class="far fa-comment"></i>12</button>
-                                                    <button class="green"><i class="fas fa-retweet"></i>45</button>
-                                                    <button class="red like-button"><i class="far fa-heart"></i><span class="like-count"></span></button>
-                                                    <button class="blue"><i class="fas fa-ellipsis-h"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <!-- </template> -->
-                                </li>
-                                <li class="event" data-date="" data-date-mob="">
-                                    <!-- <h3>Intern at DMLab, Chile</h3>
-                                    <h4>Software Engineer Intern</h4>
-
-                                    <ul class="exp-details">
-                                        <li><b>Aeris:</b> Live peer-to-peer video calling based physiotherapy</li>
-                                        <li><b>Computer Vision:</b> Pose estimation for diagnosis using Mediapipe (Tensorflow).</li>
-                                        <li><b>P2P platform:</b> Implemented fybrrChat - WebRTC based P2P video calling for the appointment system.</li>
-                                        <li><b>Website:</b> Visit <a href="https://dmlab.app/" target="_blank">DMLab, Chile</a>.</li>
-                                    </ul> -->
-                                    <!-- <template data-template="tweet-template"> -->
-                                        <div class="tweet">
-                                            <div class="left">
-                                                <img src="" class="profile-dp">
-                                            </div>
-                                            <div class="right">
-                                                <div class="info">
-                                                    <p class="profile-name"><span class="profile-id">nandini</span></p>
-                                                    <time class="tweet-time">456</time>
-                                                </div>
-                                                <div class="message tweet-text">
-                                                    <img src="" class="post-img">
-                                                    
-                                                </div>
-                                                <div class="btns">
-                                                    <button class="blue"><i class="far fa-comment"></i>12</button>
-                                                    <button class="green"><i class="fas fa-retweet"></i>45</button>
-                                                    <button class="red like-button"><i class="far fa-heart"></i><span class="like-count"></span></button>
-                                                    <button class="blue"><i class="fas fa-ellipsis-h"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <!-- </template> -->
-                                </li>
-                            </ul>
-                        </div>
+    </header>
+    <div class="wrapper d-flex h-100">
+        <aside class="sidebar h-100">
+            <div class="sidebar-section sidebar-header">
+                <div class="sidebar-logo text-center">
+                    <a href="#" class="text-light">What's up Sejbahar !</a>
+                </div>
+            </div>
+            <div class="sidebar-section sidebar-profile pt-4 pb-4">
+                <div class="profile-picture">
+                    <div class="picture-wrapper rounded-circle ml-auto mr-auto">
+                        <img src="" class="img-fluid profile-pic" alt="">
+                    </div>
+                    <span class="profile-alert"></span>
+                    <div class="profile-details text-center mt-2">
+                        <div class="name" id="name"></div>
+                        <small class="role" id="username"></small>
                     </div>
                 </div>
             </div>
+            <div class="sidebar-section sidebar-menu p-0">
+                <ul class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link rounded-0 active" id="menu-tab" data-toggle="tab" href="#menu" role="tab" aria-controls="menu" aria-selected="true">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-0" id="notifications-tab" data-toggle="tab" href="#notifications" role="tab" aria-controls="notifications" aria-selected="false">
+                            <i class="far fa-bell"></i>
+                            <span class="nav-alert bg-danger"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-0" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">
+                            <i class="far fa-comment"></i>
+                            <span class="nav-alert bg-success"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-0" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">
+                            <i class="fas fa-cogs"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+
+                    <div class="tab-pane fade show active pt-3 pb-2" id="menu" role="tabpanel" aria-labelledby="menu-tab">
+                        <div class="tab-header text-uppercase p-2">
+                            Menu
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                    <span class="menu-text flex-fill">Dashboard</span>
+                                    <span class="badge badge-pill badge-warning rounded-0">NEW</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="far fa-gem"></i>
+                                    <span class="menu-text flex-fill">Componenets</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="fa fa-chart-line"></i>
+                                    <span class="menu-text flex-fill">Charts</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="menu-text flex-fill">E-commerce</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="fa fa-globe"></i>
+                                    <span class="menu-text flex-fill">Maps</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="fa fa-calendar"></i>
+                                    <span class="menu-text flex-fill">Calendar</span>
+                                    <span class="badge badge-pill badge-primary rounded-0">BETA</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="fa fa-book"></i>
+                                    <span class="menu-text">Documentation</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade pt-3 pb-2" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
+                        <div class="tab-header text-uppercase p-2">
+                            Notifications
+                        </div>
+                        <ul>
+                            <li>
+                                <a class="p-2 d-flex align-items-center text-decoration-none" href="#">
+                                    <div class="icon">
+                                        <i class="fas fa-check text-center text-success border border-success"></i>
+                                    </div>
+                                    <div class="notification-content flex-fill overflow-hidden">
+                                        <div class="notification-detail text-nowrap text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                        <div class="notification-time">6 minutes ago</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="p-2 d-flex align-items-center text-decoration-none" href="#">
+                                    <div class="icon">
+                                        <i class="fas fa-exclamation-triangle text-center text-warning border border-warning"></i>
+                                    </div>
+                                    <div class="notification-content flex-fill overflow-hidden">
+                                        <div class="notification-detail text-nowrap text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                        <div class="notification-time">Yesterday</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="p-2 d-flex align-items-center text-decoration-none" href="#">
+                                    <div class="icon">
+                                        <i class="fas fa-exclamation text-center text-info border border-info"></i>
+                                    </div>
+                                    <div class="notification-content flex-fill overflow-hidden">
+                                        <div class="notification-detail text-nowrap text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                        <div class="notification-time">2 day ago</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="p-2 d-flex align-items-center text-decoration-none" href="#">
+                                    <div class="icon">
+                                        <i class="fas fa-times text-center text-danger border border-danger"></i>
+                                    </div>
+                                    <div class="notification-content flex-fill overflow-hidden">
+                                        <div class="notification-detail text-nowrap text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                        <div class="notification-time">A week ago</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-footer text-center">
+                            <a href="#" class="btn rounded-0 btn-block">View all notifications</a>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade pt-3 pb-2" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+                        <div class="tab-header text-uppercase p-2">
+                            Messages
+                        </div>
+                        <ul>
+                            <li>
+                                <a class="p-2 d-flex align-items-center text-decoration-none" href="#">
+                                    <div class="pic">
+                                        <img src="https://www.magic931.com.au/assets/docs/Jon_Snow.PNG?1543200080" alt="">
+                                    </div>
+                                    <div class="message-content flex-fill overflow-hidden">
+                                        <div class="message-title text-nowrap text-truncate">
+                                            Jhon Snow
+                                        </div>
+                                        <div class="message-detail text-nowrap text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="p-2 d-flex align-items-center text-decoration-none" href="#">
+                                    <div class="pic">
+                                        <img src="https://www.magic931.com.au/assets/docs/Jon_Snow.PNG?1543200080" alt="">
+                                    </div>
+                                    <div class="message-content flex-fill overflow-hidden">
+                                        <div class="message-title text-nowrap text-truncate">
+                                            Jhon Snow
+                                        </div>
+                                        <div class="message-detail text-nowrap text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="p-2 d-flex align-items-center text-decoration-none" href="#">
+                                    <div class="pic">
+                                        <img src="https://www.magic931.com.au/assets/docs/Jon_Snow.PNG?1543200080" alt="">
+                                    </div>
+                                    <div class="message-content flex-fill overflow-hidden">
+                                        <div class="message-title text-nowrap text-truncate">
+                                            Jhon Snow
+                                        </div>
+                                        <div class="message-detail text-nowrap text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="p-2 d-flex align-items-center text-decoration-none" href="#">
+                                    <div class="pic">
+                                        <img src="https://www.magic931.com.au/assets/docs/Jon_Snow.PNG?1543200080" alt="">
+                                    </div>
+                                    <div class="message-content flex-fill overflow-hidden">
+                                        <div class="message-title text-nowrap text-truncate">
+                                            Jhon Snow
+                                        </div>
+                                        <div class="message-detail text-nowrap text-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-footer text-center">
+                            <a href="#" class="btn rounded-0 btn-block">View all messages</a>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade pt-3 pb-2" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                        <div class="tab-header text-uppercase p-2">
+                            Settings
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="far fa-user"></i>
+                                    <span class="flex-fill">Profile</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="far fa-question-circle"></i>
+                                    <span class="flex-fill">Help</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center" onclick="changeDP()">
+                                    <i class="fas fa-cog"></i>
+                                    <span class="flex-fill">Settings</span>
+                                    <input type="file" id="pic-input" hidden/>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="d-flex align-items-center">
+                                    <i class="fas fa-power-off"></i>
+                                    <span class="flex-fill">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div id="timeline">
+
+            <div class="posts">
+
+            </div>
+
+
+            <template data-template="tweet-template">
+                    <div class="tweet">
+                        <div class="left">
+                            <img src="" class="profile-dp">
+                        </div>
+                        <div class="right">
+                            <div class="info">
+                                <p class="profile-name"><span class="profile-id"></span></p>
+                                <time class="tweet-time"></time>
+                            </div>
+                            <div class="message tweet-text">
+                                <img src="" class="post-img">
+                                
+                            </div>
+                            <div class="btns">
+                                <button class="blue"><i class="far fa-comment"></i>12</button>
+                                <button class="green"><i class="fas fa-retweet"></i>45</button>
+                                <button class="red like-button"><i class="far fa-heart"></i><span class="like-count"></span></button>
+                                <button class="blue"><i class="fas fa-ellipsis-h"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
         </div>
 
-        <!-- <div class="row details" id="publications">
-            <div class="col-md-12">
-                <div class="card pub-card">
-                    <div class="card-body">
-                        <h3 class="card-title pub-title">Publications</h3>
-                        <div id="content">
-                            <ul class="timeline timeline-pub">
-                                <li class="event" data-date="May 2022" data-date-mob="May 2022">
-                                    <h3>Conference Paper - RIDS : Real-time Intrusion Detection System for WPA3 enabled Enterprise Networks</h3>
-                                    <h4>GLOBECOM 2022 - IEEE Global Communications Conference (IN REVIEW)</h4>
-
-                                    <p class="pub-details">
-                                        R. Saini, <b>D. Halder</b>, and A. M. Baswade
-                                        <br>
-                                        <i class="far fa-file-download" title="Download PDF" onclick="getFile('rids.pdf', 'file');" style="cursor: pointer;"></i>
-                                    </p>
+        <!-- </div> -->
+    </div>
 
 
-                                </li>
-                                <li class="event" data-date="May 2022" data-date-mob="May 2022">
-                                    <h3>Conference Paper - fybrrChat: A Distributed Chat Application for Secure P2P Messaging</h3>
-                                    <h4>GLOBECOM 2022 - IEEE Global Communications Conference (IN REVIEW)</h4>
-
-                                    <p class="pub-details">
-                                        <b>D. Halder</b>, S. Bhushan, G. Shreya, and P. Kumar
-                                        <br>
-                                        <i class="far fa-file-download" title="Download PDF" onclick="getFile('fybrrchat.pdf', 'file');" style="cursor: pointer;"></i>
-                                    </p>
-
-
-                                </li>
-                                <li class="event" data-date="Nov 2021" data-date-mob="Nov 2021">
-                                    <h3>Journal Paper - fybrrLink: Efficient QoS-aware Routing in SDN enabled Future Satellite Networks</h3>
-                                    <h4>IEEE Transactions on Network and Service Management - Special Issue on ‘Smart Management of Softwarized Networks’</h4>
-
-                                    <p class="pub-details">
-                                        P. Kumar, S. Bhushan, <b>D. Halder</b>, and A. M. Baswade
-                                        <br>
-                                        <i class="ai ai-ieee" title="IEEE Xplore" onclick="sendToLink('https\://doi.org/10.1109/TNSM.2021.3129876');" style="cursor: pointer;"></i>
-                                        <i class="far fa-file-download" title="Download PDF" onclick="getFile('fybrrlink.pdf', 'file');" style="cursor: pointer;"></i>
-                                    </p>
-
-
-                                </li>
-
-                                <li class="event" data-date="Aug 2021" data-date-mob="Aug 2021">
-                                    <h3>Conference Paper - fybrrStream: A WebRTC based Efficient and Scalable P2P Live Streaming Platform</h3>
-                                    <h4>2021 International Conference on Computer Communications and Networks (ICCCN)</h4>
-
-                                    <p class="pub-details">
-                                        <b>D. Halder</b>, P. Kumar, S. Bhushan, and A. M. Baswade
-                                        <br>
-                                        <i class="fa fa-presentation" title="Download Slides" onclick="getFile('fybrrstream-slides.pdf', 'slide');" style="cursor: pointer;"></i>
-                                        <i class="ai ai-ieee" title="IEEE Xplore" onclick="sendToLink('https\://doi.org/10.1109/ICCCN52240.2021.9522198');" style="cursor: pointer;"></i>
-                                        <i class="far fa-file-download" title="Download PDF" onclick="getFile('fybrrstream.pdf', 'file');" style="cursor: pointer;"></i>
-                                    </p>
-
-
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- <div class="row details" id="awards">
-            <div class="col-md-12">
-                <div class="card awd-card">
-                    <div class="card-body">
-                        <h3 class="card-title awd-title">Honors and Awards</h3>
-                        <div id="content">
-                            <ul class="timeline timeline-awd">
-                                <li class="event" data-date="June 2022" data-date-mob="June 2022">
-                                    <h3>Alumni Association's Young Researcher Award</h3>
-                                    <h4>Indian Institute of Technology (IIT) Bhilai</h4>
-
-                                    <p class="awd-details">
-                                        <!-- R. Saini, <b>D. Halder</b>, and A. M. Baswade
-                                        <br>
-                                        <i class="far fa-file-download"></i> -->
-                                    </p>
-
-
-                                <!-- </li>
-                                <li class="event" data-date="Nov 2022" data-date-mob="Nov 2022">
-                                    <h3>Honorary Mention Award</h3>
-                                    <h4>2021 IEEE ComSoc Student Competition</h4>
-
-                                    <p class="awd-details"> -->
-                                        <!-- <b>D. Halder</b>, S. Bhushan, G. Shreya, and P. Kumar
-                                        <br>
-                                        <i class="far fa-file-download"></i> -->
-                                    <!-- </p>
-
-
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- <div class="row details">
-            <div class="col-md-12">
-                <div class="card awd-card">
-                    <div class="card-body">
-                        <p class="jumbo-social end-social social" style="text-align: center;">
-                            <a href="https://orcid.org/0000-0001-9098-6106" target="_blank"><i class="fa-brands fa-orcid"></i></a>
-                            <a href="https://github.com/RotonEvan" target="_blank"><i class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/debajyoti-halder/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                            <a href="https://twitter.com/Debajyoti0901" target="_blank"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.facebook.com/roton.evan.0901" target="_blank"><i class="fab fa-facebook"></i></a>
-                        </p>
-                        <h3 class="card-title end-title">Btw, you can also call me Roton !</h3>
-
-                    </div>
-                </div>
-            </div>
-        </div> --> -->
-
-    <!-- </div> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../js/profile.js"></script>

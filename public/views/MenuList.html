@@ -1,137 +1,160 @@
 <!DOCTYPE html>
-<html Lang="en">
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta nane="viewport" content="width=device-width, initial-scale=1">
-<title>Menu List</title>
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisty |Bree+Serif|Candal |PT+Sans">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href=""><!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="../css/menulist.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/menulist.css">
+   
 </head>
+
 <body>
-    <!--MENU LIST-->
-    <section id="menu-list" class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center marb-35">
-                <h1 class="header-h">MENU LIST</h1>
+  
+    <section class="header">
+        <nav>
+            <a href="home.html"><img src="../images/logo.jpeg" alt="IIT-Bhilai" width="100" height="100"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="/home">HOME</a></li>
+                    <li><a href="/profile">PROFILE</a></li>
+                    <li><a href="/feed">FEED</a></li>
+                    <li><a href="/calender">CALENDAR</a></li>
+                    <li><a href="">T&P CELL BLOGS</a></li>
+                    <li><a href="/map">MAP</a></li>
+                    <li><a href="/about">ABOUT</a></li>
+                    <li><a href="/complaints">COMPLAINTS</a></li>
+                    <li>
+                        <a href="/emergency">EMERGENCY</a>
+                    </li>
+                </ul>
             </div>
-           <div class="col-md-12 text-center" id="menu-flters">
-            <ul>
-                <li><a href="#"class="filter"data-filter=".menu-resturtant">Show all</a></li>
-                <li><a href="#"class="filter"data-filter=".breakfast">breakfast</a></li>
-                <li><a href="#"class="filter"data-filter=".lunch">Lunch</a></li>
-                <li><a href="#"class="filter"data-filter=".dinner">dinner</a></li>
-            </ul>
-           </div>
-           <div class="menu-wrapper">
-            <div class="breakfast menu-resturtant">
-                <span class="clearfix">
-                    <a class="menu-title"data-meal-img="">Food item name</a>
-                    <span style="left:166px;right:44px;"class="menu-line"></span>
-                   
-            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
 
-            <div class="breakfast menu-resturtant">
-                <span class="clearfix">
-                    <a class="menu-title"data-meal-img="">Food item name</a>
-                    <span style="left:166px;right:44px;"class="menu-line"></span>
-                   
-            </div>
+        <h1> <center>TODAY'S MENU</center></h1><br><br>
 
-            <div class="breakfast menu-resturtant">
-                <span class="clearfix">
-                    <a class="menu-title"data-meal-img="">Food item name</a>
-                    <span style="left:166px;right:44px;"class="menu-line"></span>
-                   
-            </div>
-
-            <div class="breakfast menu-resturtant">
-                <span class="clearfix">
-                    <a class="menu-title"data-meal-img="">Food item name</a>
-                    <span style="left:166px;right:44px;"class="menu-line"></span>
-                   
-            </div><!--end breakfast-->
-
-            <div class="lunch menu-resturtant">
-                <span class="clearfix">
-                    <a class="menu-title"data-meal-img="">Food item name</a>
-                    <span style="left:166px;right:44px;"class="menu-line"></span>
+        <div class="food">
+            <div class="food-row">
+                <div class="card">
+                
+                    <h4>BREAKFAST</h4>
+                    <ul class="food-list">
+                        <li> brown bread/ white bread/ multigrain bread</li>
+                        <li>Tea/Coffee/Milk</li>
+                        <li>Poha</li>
+                        <li>Cornflakes</li>
+                        <li>Paranthe</li>
+                    </ul>
+                </div>
+                <div class="card">
+                
+                    <h4>LUNCH</h4>
+                    <ul class="food-list">
+                        <li> brown bread/ white bread/ multigrain bread</li>
+                        <li>Tea/Coffee/Milk</li>
+                        <li>Poha</li>
+                        <li>Cornflakes</li>
+                        <li>Paranthe</li>
+                    </ul>
+                </div>
+                <div class="card">
                     
+                    <h4>SNACKS</h4>
+                    <ul class="food-list">
+                        <li> brown bread/ white bread/ multigrain bread</li>
+                        <li>Tea/Coffee/Milk</li>
+                        <li>Poha</li>
+                        <li>Cornflakes</li>
+                        <li>Paranthe</li>
+                    </ul>
+                </div>
+                <div class="card">
+        
+                    <h4>DINNER</h4>
+                    <ul class="food-list">
+                        <li> brown bread/ white bread/ multigrain bread</li>
+                        <li>Tea/Coffee/Milk</li>
+                        <li>Poha</li>
+                        <li>Cornflakes</li>
+                        <li>Paranthe</li>
+                    </ul>
+                </div>
+
             </div>
-           
-           
-            <div class="lunch menu-resturtant">
-                <span class="clearfix">
-                    <a class="menu-title"data-meal-img="">Food item name</a>
-                    <span style="left:166px;right:44px;"class="menu-line"></span>
+        </div>
+       <br><br> <h1> <center>WEEKLY MENU</center></h1><br><br>
+
+        <div class="filter">
+
+        </div>
+        <table>
+            <tr><td>Sunday</td></tr>
+            <tr><td>Monday</td></tr>
+            <tr><td>Tuesday</td></tr>
+            <tr><td>Wednesday</td></tr>
+            <tr><td>Thursday</td></tr>
+            <tr><td>Friday</td></tr>
+            <tr><td>Saturday</td></tr>
+        </table><br><br>
+
+        <div class="food">
+            <div class="food-row">
+                <div class="card">
+                
+                    <h4>BREAKFAST</h4>
+                    <ul class="food-list">
+                        <li> brown bread/ white bread/ multigrain bread</li>
+                        <li>Tea/Coffee/Milk</li>
+                        <li>Poha</li>
+                        <li>Cornflakes</li>
+                        <li>Paranthe</li>
+                    </ul>
+                </div>
+                <div class="card">
+                
+                    <h4>LUNCH</h4>
+                    <ul class="food-list">
+                        <li> brown bread/ white bread/ multigrain bread</li>
+                        <li>Tea/Coffee/Milk</li>
+                        <li>Poha</li>
+                        <li>Cornflakes</li>
+                        <li>Paranthe</li>
+                    </ul>
+                </div>
+                <div class="card">
                     
+                    <h4>SNACKS</h4>
+                    <ul class="food-list">
+                        <li> brown bread/ white bread/ multigrain bread</li>
+                        <li>Tea/Coffee/Milk</li>
+                        <li>Poha</li>
+                        <li>Cornflakes</li>
+                        <li>Paranthe</li>
+                    </ul>
+                </div>
+                <div class="card">
+        
+                    <h4>DINNER</h4>
+                    <ul class="food-list">
+                        <li> brown bread/ white bread/ multigrain bread</li>
+                        <li>Tea/Coffee/Milk</li>
+                        <li>Poha</li>
+                        <li>Cornflakes</li>
+                        <li>Paranthe</li>
+                    </ul>
+                </div>
+
             </div>
-           
-            <div class="lunch menu-resturtant">
-                <span class="clearfix">
-                    <a class="menu-title"data-meal-img="">Food item name</a>
-                    <span style="left:166px;right:44px;"class="menu-line"></span>
-                  
-            </div>
-           
-           
-             <div class="lunch menu-resturtant">
-                <span class="clearfix">
-                    <a class="menu-title"data-meal-img="">Food item name</a>
-                    <span style="left:166px;right:44px;"class="menu-line"></span>
-                   
-              
-            </div><!--end lunch-->
+        </div>
+    </div>
+    
 
 
-            <div class="dinner menu-resturtant">
-                <span class="clearfix">
-                    <a class="menu-title"data-meal-img="">Food item name</a>
-                    <span style="left:166px;right:44px;"class="menu-line"></span>
-                  
-              
-            </div>
-
-
-            <div class="dinner menu-resturtant">
-                <span class="clearfix">
-                    <a class="menu-title"data-meal-img="">Food item name</a>
-                    <span style="left:166px;right:44px;"class="menu-line"></span>
-                 
-               
-            </div>
-
-
-            <div class="dinner menu-resturtant">
-                <span class="clearfix">
-                    <a class="menu-title"data-meal-img="">Food item name</a>
-                    <span style="left:166px;right:44px;"class="menu-line"></span>
-                    
-            </div>
-
-
-            <div class="dinner menu-resturtant">
-                <span class="clearfix">
-                    <a class="menu-title"data-meal-img="">Food item name</a>
-                    <span style="left:166px;right:44px;"class="menu-line"></span>
-                  
-               
-            </div><!--end dinner-->
-
-           
-           </div><!--End menu wrap-->
-        </div><!--End row -->
-    </div><!--End container-->`
-    </section><!--End Section-->
-<!--JQuery (Bootstrap's Javascript plugin)--> 
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/custom.js"></script>
-<script src="contact-form/contactform.js"></script>
+    </section>
 </body>
+
 </html>

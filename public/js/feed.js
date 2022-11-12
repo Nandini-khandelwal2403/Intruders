@@ -194,7 +194,7 @@ function getAllPosts() {
                             clone.querySelector('.profile-dp').setAttribute('src', dp_url);
                             clone.querySelector('.profile-name').innerHTML = post.name + ' <span class="profile-id">@' + post.username + '</span>';
                             // clone.querySelector('.profile-id').innerHTML = '@' + post.user.email.substring(0, post.user.email.indexOf('@'));
-                            clone.querySelector('.tweet-text').innerHTML = post.msg + '<img src="' + url + '" alt="">';
+                            clone.querySelector('.tweet-text').innerHTML = '<p>' + post.msg + '<p>' + '<img src="' + url + '" alt="">';
                             clone.querySelector('.tweet-time').innerHTML = new Date(parseInt(post.time)).toString().substring(4, 21);
                             clone.querySelector('.like-count').innerHTML += post.likecount;
                             clone.querySelector('.like-count').setAttribute('id', post._id + '-likecount');
@@ -205,7 +205,7 @@ function getAllPosts() {
                             clone.querySelector('.profile-dp').setAttribute('src', '/images/default.png');
                             clone.querySelector('.profile-name').innerHTML = post.name + ' <span class="profile-id">@' + post.username + '</span>';
                             // clone.querySelector('.profile-id').innerHTML = '@' + post.user.email.substring(0, post.user.email.indexOf('@'));
-                            clone.querySelector('.tweet-text').innerHTML = post.msg + '<img src="' + url + '" alt="">';
+                            clone.querySelector('.tweet-text').innerHTML = '<p>' + post.msg + '<p>' + '<img src="' + url + '" alt="">';
                             clone.querySelector('.tweet-time').innerHTML = new Date(parseInt(post.time)).toString().substring(4, 21);
                             clone.querySelector('.like-count').innerHTML += post.likecount;
                             clone.querySelector('.like-count').setAttribute('id', post._id + '-likecount');
@@ -237,7 +237,7 @@ function getAllPosts() {
                         clone.querySelector('.profile-dp').setAttribute('src', dp_url);
                         clone.querySelector('.profile-name').innerHTML = post.name + ' <span class="profile-id">@' + post.username + '</span>';
                         // clone.querySelector('.profile-id').innerHTML = '@' + post.user.email.substring(0, post.user.email.indexOf('@'));
-                        clone.querySelector('.tweet-text').innerHTML = post.msg;
+                        clone.querySelector('.tweet-text').innerHTML = '<p>' + post.msg + '<p>';
                         clone.querySelector('.tweet-time').innerHTML = new Date(parseInt(post.time)).toString().substring(4, 21);
                         clone.querySelector('.like-count').innerHTML += post.likecount;
                         clone.querySelector('.like-count').setAttribute('id', post._id + '-likecount');
@@ -248,7 +248,7 @@ function getAllPosts() {
                         clone.querySelector('.profile-dp').setAttribute('src', '/images/default.png');
                         clone.querySelector('.profile-name').innerHTML = post.name + ' <span class="profile-id">@' + post.username + '</span>';
                         // clone.querySelector('.profile-id').innerHTML = '@' + post.user.email.substring(0, post.user.email.indexOf('@'));
-                        clone.querySelector('.tweet-text').innerHTML = post.msg;
+                        clone.querySelector('.tweet-text').innerHTML = '<p>' + post.msg + '<p>';
                         clone.querySelector('.tweet-time').innerHTML = new Date(parseInt(post.time)).toString().substring(4, 21);
                         clone.querySelector('.like-count').innerHTML += post.likecount;
                         clone.querySelector('.like-count').setAttribute('id', post._id + '-likecount');

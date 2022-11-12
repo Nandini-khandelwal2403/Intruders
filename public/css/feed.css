@@ -1,14 +1,22 @@
 body {
     overflow: hidden;
-    background-color: var(--bg1);
+    background-color: var(--bg1) !important;
     outline: none;
 }
 
+input:focus,
+textarea:focus,
+select:focus,
+button:focus,
+a:focus {
+    outline: none !important;
+}
+
 :root {
-    --bg1: #e5e5e5;
-    --bg2: #eee;
-    --bg3: #fff;
-    --color: #000;
+    --bg1: #15202b;
+    --bg2: #192734;
+    --bg3: #253341;
+    --color: #fff;
 }
 
 #container {
@@ -64,7 +72,7 @@ body {
     box-sizing: border-box;
     height: 51px;
     cursor: pointer;
-    color: var(--color);
+    color: var(--color) !important;
     background: var(--bg3);
 }
 
@@ -72,6 +80,10 @@ body {
     width: 70%;
     height: auto;
     margin: 10px auto;
+}
+
+.new-tweet {
+    margin-bottom: 10px;
 }
 
 
