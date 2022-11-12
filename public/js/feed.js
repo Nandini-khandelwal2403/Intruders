@@ -182,14 +182,14 @@ function getAllPosts() {
                     const template = document.querySelector('template[data-template="tweet-template"]');
                     const clone = template.content.cloneNode(true);
                     clone.querySelector('.tweet').setAttribute('id', post._id);
-                    if (post.pic) {
-                        axios({
-                            method: 'get',
-                            url: location.protocol + '//' + location.host + '/api/files/get/' + post.pic,
-                            responseType: 'arraybuffer',
-                            headers: { "Content-Type": post.picType }
-                        }).then((res) => {
-                            let blob = new Blob([res.data], { type: post.picType });
+                    axios({
+                        method: 'get',
+                        url: location.protocol + '//' + location.host + '/api/user/getdp/' + post.user,
+                        responseType: 'arraybuffer',
+                        // headers: { "Content-Type": post.picType }
+                    }).then((res) => {
+                        if (!res.msg) {
+                            let blob = new Blob([res.data], { type: res.picType });
                             let dp_url = URL.createObjectURL(blob);
                             clone.querySelector('.profile-dp').setAttribute('src', dp_url);
                             clone.querySelector('.profile-name').innerHTML = post.name + ' <span class="profile-id">@' + post.username + '</span>';
@@ -201,20 +201,21 @@ function getAllPosts() {
                             clone.querySelector('.like-button').setAttribute('id', post._id + '-likebutton');
                             clone.querySelector('.like-button').setAttribute('onclick', 'incrementLikes(this.id)');
                             document.querySelector('.posts').prepend(clone);
-                        }).catch((err) => {
-                            console.log(err);
-                        });
-                    } else {
-                        clone.querySelector('.profile-name').innerHTML = post.name + ' <span class="profile-id">@' + post.username + '</span>';
-                        // clone.querySelector('.profile-id').innerHTML = '@' + post.user.email.substring(0, post.user.email.indexOf('@'));
-                        clone.querySelector('.tweet-text').innerHTML = post.msg + '<img src="' + url + '" alt="">';
-                        clone.querySelector('.tweet-time').innerHTML = new Date(parseInt(post.time)).toString().substring(4, 21);
-                        clone.querySelector('.like-count').innerHTML += post.likecount;
-                        clone.querySelector('.like-count').setAttribute('id', post._id + '-likecount');
-                        clone.querySelector('.like-button').setAttribute('id', post._id + '-likebutton');
-                        clone.querySelector('.like-button').setAttribute('onclick', 'incrementLikes(this.id)');
-                        document.querySelector('.posts').prepend(clone);
-                    }
+                        } else {
+                            clone.querySelector('.profile-dp').setAttribute('src', '/images/default.png');
+                            clone.querySelector('.profile-name').innerHTML = post.name + ' <span class="profile-id">@' + post.username + '</span>';
+                            // clone.querySelector('.profile-id').innerHTML = '@' + post.user.email.substring(0, post.user.email.indexOf('@'));
+                            clone.querySelector('.tweet-text').innerHTML = post.msg + '<img src="' + url + '" alt="">';
+                            clone.querySelector('.tweet-time').innerHTML = new Date(parseInt(post.time)).toString().substring(4, 21);
+                            clone.querySelector('.like-count').innerHTML += post.likecount;
+                            clone.querySelector('.like-count').setAttribute('id', post._id + '-likecount');
+                            clone.querySelector('.like-button').setAttribute('id', post._id + '-likebutton');
+                            clone.querySelector('.like-button').setAttribute('onclick', 'incrementLikes(this.id)');
+                            document.querySelector('.posts').prepend(clone);
+                        }
+                    }).catch((err) => {
+                        console.log(err);
+                    });
 
 
                 }).catch((err) => {
@@ -224,15 +225,14 @@ function getAllPosts() {
                 const template = document.querySelector('template[data-template="tweet-template"]');
                 const clone = template.content.cloneNode(true);
                 clone.querySelector('.tweet').setAttribute('id', post._id);
-                if (post.pic) {
-                    console.log(post.pic, post.picType);
-                    axios({
-                        method: 'get',
-                        url: location.protocol + '//' + location.host + '/api/files/get/' + post.pic,
-                        responseType: 'arraybuffer',
-                        headers: { "Content-Type": post.picType }
-                    }).then((res) => {
-                        let blob = new Blob([res.data], { type: post.picType });
+                axios({
+                    method: 'get',
+                    url: location.protocol + '//' + location.host + '/api/user/getdp/' + post.user,
+                    responseType: 'arraybuffer',
+                    // headers: { "Content-Type": post.picType }
+                }).then((res) => {
+                    if (!res.msg) {
+                        let blob = new Blob([res.data], { type: res.picType });
                         let dp_url = URL.createObjectURL(blob);
                         clone.querySelector('.profile-dp').setAttribute('src', dp_url);
                         clone.querySelector('.profile-name').innerHTML = post.name + ' <span class="profile-id">@' + post.username + '</span>';
@@ -244,20 +244,21 @@ function getAllPosts() {
                         clone.querySelector('.like-button').setAttribute('id', post._id + '-likebutton');
                         clone.querySelector('.like-button').setAttribute('onclick', 'incrementLikes(this.id)');
                         document.querySelector('.posts').prepend(clone);
-                    }).catch((err) => {
-                        console.log(err);
-                    });
-                } else {
-                    clone.querySelector('.profile-name').innerHTML = post.name + ' <span class="profile-id">@' + post.username + '</span>';
-                    // clone.querySelector('.profile-id').innerHTML = '@' + post.user.email.substring(0, post.user.email.indexOf('@'));
-                    clone.querySelector('.tweet-text').innerHTML = post.msg;
-                    clone.querySelector('.tweet-time').innerHTML = new Date(parseInt(post.time)).toString().substring(4, 21);
-                    clone.querySelector('.like-count').innerHTML += post.likecount;
-                    clone.querySelector('.like-count').setAttribute('id', post._id + '-likecount');
-                    clone.querySelector('.like-button').setAttribute('id', post._id + '-likebutton');
-                    clone.querySelector('.like-button').setAttribute('onclick', 'incrementLikes(this.id)');
-                    document.querySelector('.posts').prepend(clone);
-                }
+                    } else {
+                        clone.querySelector('.profile-dp').setAttribute('src', '/images/default.png');
+                        clone.querySelector('.profile-name').innerHTML = post.name + ' <span class="profile-id">@' + post.username + '</span>';
+                        // clone.querySelector('.profile-id').innerHTML = '@' + post.user.email.substring(0, post.user.email.indexOf('@'));
+                        clone.querySelector('.tweet-text').innerHTML = post.msg;
+                        clone.querySelector('.tweet-time').innerHTML = new Date(parseInt(post.time)).toString().substring(4, 21);
+                        clone.querySelector('.like-count').innerHTML += post.likecount;
+                        clone.querySelector('.like-count').setAttribute('id', post._id + '-likecount');
+                        clone.querySelector('.like-button').setAttribute('id', post._id + '-likebutton');
+                        clone.querySelector('.like-button').setAttribute('onclick', 'incrementLikes(this.id)');
+                        document.querySelector('.posts').prepend(clone);
+                    }
+                }).catch((err) => {
+                    console.log(err);
+                });
 
             }
 
