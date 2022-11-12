@@ -28,9 +28,12 @@ exports.RegisterUser = async(req, res) => {
 
 exports.LoginUser = (req, res) => {
     User.findOne({ 'number': req.body.number }, (err, user) => {
+        console.log('entered login');
         if (!user) {
+            console.log('user not found');
             return res.status(404).json({ success: false, message: 'User not found!' });
         } else {
+            console.log('user found');
             user.comparePassword(req.body.password, (err, isMatch) => {
                 console.log(isMatch);
                 //isMatch is eaither true or false
@@ -39,6 +42,7 @@ exports.LoginUser = (req, res) => {
                 } else {
                     user.generateToken((err, user) => {
                         if (err) {
+                            console.log(err);
                             return res.status(400).send({ err });
                         } else {
                             const data = {
