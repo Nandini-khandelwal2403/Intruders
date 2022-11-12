@@ -68,7 +68,7 @@ nav img {
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(rgb(183, 184, 194), rgba(44, 4, 49));
+    /* background: linear-gradient(rgb(183, 184, 194), rgba(44, 4, 49)); */
     font-size: 12px;
     overflow-x: hidden;
 }
@@ -113,13 +113,14 @@ input {
     width: 100%;
 }
 
-#container {
+
+/* #container {
     margin-left: 70px;
     margin-right: -100px;
-    /* border: 1px solid silver; */
+    border: 1px solid silver;
     overflow: scroll !important;
     background-color: transparent;
-    /* height: 500px; */
+    height: 500px;
 }
 
 .labels {
@@ -143,4 +144,4 @@ input {
 #container p {
     font-size: 13px;
     line-height: 16px;
-}
+} */
