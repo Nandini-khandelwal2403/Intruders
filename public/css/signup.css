@@ -21,14 +21,13 @@ html {
 .btn-larger {
     padding: 15px 40px !important;
     border: 2px solid #8e279e !important;
-    ;
     border-radius: 0px !important;
     text-transform: uppercase;
     font-family: 'Dosis', sans-serif;
     font-size: 18px;
     font-weight: 300;
     color: #320c38;
-    background-color: transparent;
+    /* background-color: linear-gradient(rgba(67, 12, 113, 0.7), rgba(25, 0, 29, 0.7)); */
     -webkit-transition: all .6s;
     -moz-transition: all .6s;
     transition: all .6s;
@@ -40,7 +39,7 @@ html {
 .btn-larger.active,
 .open .dropdown-toggle.btn-larger {
     border-color: #320c38;
-    color: #fff;
+    color: linear-gradient(rgb(183, 184, 194), rgba(44, 4, 49));
     background-color: #320c38;
     border-radius: 0
 }
@@ -73,6 +72,10 @@ fieldset[disabled] .btn-larger.active {
 .btn-larger .badge {
     color: #AEA8D3;
     background-color: #fff;
+}
+
+.color {
+    color: #fff;
 }
 
 div#form {
