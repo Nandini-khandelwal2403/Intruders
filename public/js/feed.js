@@ -115,10 +115,11 @@ function createPost() {
                 clone.querySelector('.like-button').setAttribute('id', res.data._id + '-likebutton');
                 clone.querySelector('.like-button').setAttribute('onclick', 'incrementLikes(this.id)');
                 document.querySelector('.posts').prepend(clone);
+                document.querySelector('.new-post-img').src = "";
             }).catch((err) => {
                 console.log(err);
             });
-            delete allFiles[file];
+            // delete allFiles[file];
         })
     } else {
         axios({
