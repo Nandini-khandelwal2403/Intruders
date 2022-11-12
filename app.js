@@ -203,6 +203,15 @@ app.get('/complaints', (req, res) => {
     res.sendFile(__dirname + '/public/views/form.html');
 })
 
+app.get('/emergency', (req, res) => {
+    res.sendFile(__dirname + '/public/views/people.html');
+
+})
+
+app.get('/profile', (req, res) => {
+    res.sendFile(__dirname + '/public/views/personal.html');
+})
+
 app.get('/login', auth, (req, res) => {
     if (req.isAuth) {
         res.redirect('/profile');
@@ -221,6 +230,18 @@ app.get('/feed', auth, (req, res) => {
         return;
     }
     res.sendFile(__dirname + '/public/views/feed.html');
+});
+
+app.get('/calender', (req, res) => {
+    res.sendFile(__dirname + '/public/views/index.html');
+});
+
+app.get('/map', (req, res) => {
+    res.sendFile(__dirname + '/public/views/map.html');
+});
+
+app.get('/about', (req, res) => {
+    res.sendFile(__dirname + '/public/views/about.html');
 });
 
 // app.get('/register', (req, res) => {

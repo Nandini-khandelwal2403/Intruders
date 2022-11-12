@@ -1,0 +1,146 @@
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(67, 12, 113, 0.7), rgba(25, 0, 29, 0.7)), url(../images/iit-bhilai-04.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 1% 4%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 100px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 1% 8px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #3e383e;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgb(183, 184, 194), rgba(44, 4, 49));
+    font-size: 12px;
+    overflow-x: hidden;
+}
+
+body,
+button,
+input {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.background {
+    display: flex;
+    min-height: 100vh;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 1% 8px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #dd09e0;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+#container {
+    margin-left: 70px;
+    margin-right: -100px;
+    /* border: 1px solid silver; */
+    overflow: scroll !important;
+    background-color: transparent;
+    /* height: 500px; */
+}
+
+.labels {
+    float: left;
+    width: 200px;
+    font-size: 14px;
+    position: relative;
+    height: 600px;
+}
+
+.labels .label {
+    position: absolute;
+}
+
+#container h4 {
+    text-transform: none;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+#container p {
+    font-size: 13px;
+    line-height: 16px;
+}
