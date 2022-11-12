@@ -75,6 +75,11 @@ fieldset[disabled] .btn-larger.active {
     background-color: #fff;
 }
 
+.color {
+    color: #fff;
+    background-color: #8e279e;
+}
+
 div#form {
     color: #fff;
     background-attachment: scroll;
