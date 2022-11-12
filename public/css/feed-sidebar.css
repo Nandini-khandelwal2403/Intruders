@@ -28,7 +28,7 @@
 }
 
 .wrapper aside.sidebar .sidebar-profile .profile-details .role {
-    color: #5f6a82;
+    color: #efefef;
 }
 
 .wrapper aside.sidebar .sidebar-menu ul#nav-tab {
@@ -104,7 +104,7 @@
 .wrapper aside.sidebar .sidebar-menu #menu ul li a {
     padding: 0.5rem 0.6rem;
     text-decoration: none;
-    color: #5f6a82;
+    color: #efefef;
 }
 
 .wrapper aside.sidebar .sidebar-menu #menu ul li a i {
@@ -112,7 +112,7 @@
     height: 35px;
     text-align: center;
     line-height: 35px;
-    color: #5f6a82;
+    color: #efefef;
     font-size: 0.9rem;
     border: 1px solid #3a4150;
     margin-right: 0.5rem;
@@ -212,7 +212,7 @@
 .wrapper aside.sidebar .sidebar-menu #settings ul li a {
     padding: 0.5rem 0.6rem;
     text-decoration: none;
-    color: #5f6a82;
+    color: #efefef;
 }
 
 .wrapper aside.sidebar .sidebar-menu #settings ul li a i {
