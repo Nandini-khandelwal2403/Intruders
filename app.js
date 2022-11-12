@@ -148,6 +148,25 @@ app.post('/api/user/pic', auth, upload.single('file'), async(req, res) => {
     }
 });
 
+app.get('/api/user/getdp/:userid', auth, async(req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    try {
+        let user = await User.findOne({ _id: req.params.userid });
+        if (user.pic) {
+            res.picType = user.picType;
+            let objid = mongoose.Types.ObjectId(user.pic);
+            bucket.openDownloadStream(objid).pipe(res);
+        } else {
+            res.json({ msg: 'No pic' });
+        }
+    } catch (error) {
+        console.log(error);
+    }
+});
+
 app.get("/api/files/get/:id", (req, res) => {
     const id = req.params.id;
     console.log(typeof id);
