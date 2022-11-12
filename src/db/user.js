@@ -18,17 +18,17 @@ const user = new mongoose.Schema({
     },
     branch: {
         type: String,
-        required: [true, 'The branch field is required!'],
+        // required: [true, 'The branch field is required!'],
         trim: true
     },
     year: {
         type: String,
-        required: [true, 'The year field is required!'],
+        // required: [true, 'The year field is required!'],
         trim: true
     },
     program: {
         type: String,
-        required: [true, 'The program field is required!'],
+        // required: [true, 'The program field is required!'],
         trim: true
     },
     email: {
