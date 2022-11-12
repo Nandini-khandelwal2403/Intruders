@@ -12,7 +12,10 @@ exports.RegisterUser = async(req, res) => {
                 name: doc.name,
                 enroll: doc.enroll,
                 number: doc.number,
-                email: doc.email
+                email: doc.email,
+                branch: doc.branch,
+                program: doc.program,
+                year: doc.year
             }
             return res.status(200).json({
                 success: true,
