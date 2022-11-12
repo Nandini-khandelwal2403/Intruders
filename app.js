@@ -121,6 +121,11 @@ app.get('/complaints', (req, res) => {
     res.sendFile(__dirname + '/public/views/form.html');
 })
 
+app.get('/emergency', (req, res) => {
+    res.sendFile(__dirname + '/public/views/people.html');
+
+})
+
 app.get('/login', auth, (req, res) => {
     if (req.isAuth) {
         res.redirect('/profile');
