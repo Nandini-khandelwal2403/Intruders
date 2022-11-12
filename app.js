@@ -150,6 +150,18 @@ app.get('/feed', auth, (req, res) => {
     res.sendFile(__dirname + '/public/views/feed.html');
 });
 
+app.get('/calender', (req, res) => {
+    res.sendFile(__dirname + '/public/views/index.html');
+});
+
+app.get('/map', (req, res) => {
+    res.sendFile(__dirname + '/public/views/map.html');
+});
+
+app.get('/about', (req, res) => {
+    res.sendFile(__dirname + '/public/views/about.html');
+});
+
 // app.get('/register', (req, res) => {
 //     res.sendFile(__dirname + '/public/views/register.html');
 // })
