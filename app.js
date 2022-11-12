@@ -213,6 +213,20 @@ app.get('/api/post/getall', auth, async(req, res) => {
     }
 });
 
+app.get('/api/post/getallfromid/:id', auth, async(req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    try {
+        const user = await User.findOne({ number: req.params.id });
+        const posts = await Post.find({ username: user.email.split('@')[0] });
+        res.json(posts);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
 app.post('/api/post/incrementlikes', auth, async(req, res) => {
     if (!req.isAuth) {
         res.redirect('/login');
