@@ -15,7 +15,6 @@ const user = new mongoose.Schema({
         type: String,
         required: [true, 'The enroll field is required!'],
         trim: true,
-        unique: 1
     },
     branch: {
         type: String,
@@ -36,7 +35,6 @@ const user = new mongoose.Schema({
         type: String,
         required: [true, 'The email field is required!'],
         trim: true,
-        unique: 1
     },
     password: {
         type: String,

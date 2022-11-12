@@ -35,5 +35,7 @@ function login() {
     }).then((res) => {
         console.log(res.data.userData);
         window.location.href = location.protocol + '//' + location.host + '/profile';
-    })
+    }).catch((err) => {
+        console.log(err);
+    });
 }
