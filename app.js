@@ -231,7 +231,7 @@ app.get('/profile', (req, res) => {
     res.sendFile(__dirname + '/public/views/personal.html');
 })
 
-app.get('/login', auth, (req, res) => {
+app.get('/login', (req, res) => {
     if (req.isAuth) {
         res.redirect('/profile');
         return;
