@@ -13,11 +13,42 @@ const post = new mongoose.Schema({
         trim: true,
         maxlength: 100
     },
+    name: {
+        type: String,
+        required: [true, 'The name field is required!'],
+        trim: true,
+        maxlength: 100
+    },
+    username: {
+        type: String,
+        required: [true, 'The username field is required!'],
+        trim: true,
+        maxlength: 100
+    },
     time: {
         type: String,
         required: [true, 'The time field is required!'],
         trim: true,
         maxlength: 100
+    },
+    likes: {
+        type: Array,
+    },
+    likecount: {
+        type: Number,
+        default: 0
+    },
+    img: {
+        type: String,
+    },
+    imgType: {
+        type: String,
+    },
+    pic: {
+        type: String,
+    },
+    picType: {
+        type: String,
     },
 }, { minimize: false });
 

@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="../css/profile2.css">
-    <link rel="stylesheet" href="../css/profile-sidebar.css">
+    <link rel="stylesheet" href="../css/feed.css">
+    <link rel="stylesheet" href="../css/feed-sidebar.css">
 
     <!-- Remix Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -31,12 +31,12 @@
             <div class="sidebar-section sidebar-profile pt-4 pb-4">
                 <div class="profile-picture">
                     <div class="picture-wrapper rounded-circle ml-auto mr-auto">
-                        <img src="https://www.magic931.com.au/assets/docs/Jon_Snow.PNG?1543200080" class="img-fluid" alt="">
+                        <img src="https://www.magic931.com.au/assets/docs/Jon_Snow.PNG?1543200080" class="img-fluid profile-pic" alt="">
                     </div>
                     <span class="profile-alert"></span>
                     <div class="profile-details text-center mt-2">
                         <div class="name" id="name">Jhon Snow</div>
-                        <small class="role" id="userid">King in the north</small>
+                        <small class="role" id="username">King in the north</small>
                     </div>
                 </div>
             </div>
@@ -252,9 +252,10 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="d-flex align-items-center">
+                                <a href="#" class="d-flex align-items-center" onclick="changeDP()">
                                     <i class="fas fa-cog"></i>
                                     <span class="flex-fill">Settings</span>
+                                    <input type="file" id="pic-input" hidden/>
                                 </a>
                             </li>
                             <li>
@@ -271,10 +272,12 @@
         <div id="container" class="wrapper nav-closed">
             <div id="timeline">
                 <div class="new-tweet">
-                    <textarea placeholder="What's happening?"></textarea>
+                    <textarea placeholder="What's happening?" id="newPostMsg"></textarea>
+                    <img src="" class="new-post-img">
                     <div class="btns">
                         <div class="btn">
-                            <button><i class="fas fa-image"></i></button>
+                            <button onclick="document.getElementById('files-input').click();"><i class="fas fa-image"></i></button>
+                            <input type="file" id="files-input" hidden/>
                         </div>
                         <div class="btn">
                             <button><i class="fas fa-film"></i></button>
@@ -283,11 +286,14 @@
                             <button><i class="fas fa-chart-bar"></i></button>
                         </div>
                         <div class="btn">
-                            <button class="blue"><i class="fas fa-comment"></i>Tweet</button>
+                            <button class="blue" onclick="createPost()"><i class="fas fa-comment"></i>Post</button>
                         </div class="green">
                     </div>
                 </div>
-                <div class="tweet">
+                <div class="posts">
+
+                </div>
+                <!-- <div class="tweet">
                     <div class="left">
                         <img src="https://yt3.ggpht.com/-uJh4oSQAwak/AAAAAAAAAAI/AAAAAAAAAAA/AMGKfKvDP3w/s900-c-k-no-mo-rj-c0xffffff/photo.jpg">
                     </div>
@@ -307,75 +313,8 @@
                             <button class="blue"><i class="fas fa-ellipsis-h"></i></button>
                         </div>
                     </div>
-                </div>
-                <div class="tweet">
-                    <div class="left">
-                        <img src="https://pbs.twimg.com/profile_images/1153329245248053248/xONN2R7u_400x400.png">
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <p>Ian | Gibbu<span>@Gibbu_</span></p>
-                            <time>23m</time>
-                        </div>
-                        <div class="message">
-                            <p>This is my third attempt ona redesign for Twitter.</p>
-                            <p>Typing anything into the search input will display "YouTube" results.</p>
-                            <p>You can also press "More" > "Display" to customize Twitter.</p>
-                        </div>
-                        <div class="btns">
-                            <button class="blue"><i class="far fa-comment"></i>2</button>
-                            <button class="green"><i class="fas fa-retweet"></i>1</button>
-                            <button class="red"><i class="far fa-heart"></i>5</button>
-                            <button class="blue"><i class="fas fa-ellipsis-h"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="tweet">
-                    <div class="left">
-                        <img src="https://www.thesun.co.uk/wp-content/uploads/2016/04/2129070.main_image.jpg?w=620&strip=all">
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <p>Albus Dumbledore<span>@albusdumb</span></p>
-                            <time>23m</time>
-                        </div>
-                        <div class="message">
-                            <p>Very impressive work by this young fellow.</p>
-                            <div class="iframe-container">
-                                <iframe src="https://www.youtube.com/embed/MvjQTA81MhY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
-                            </div>
-                        </div>
-                        <div class="btns">
-                            <button class="blue"><i class="far fa-comment"></i>12</button>
-                            <button class="green"><i class="fas fa-retweet"></i>45</button>
-                            <button class="red"><i class="far fa-heart"></i>73</button>
-                            <button class="blue"><i class="fas fa-ellipsis-h"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="tweet">
-                    <div class="left">
-                        <img src="https://static0.therichestimages.com/wp-content/uploads/Will-Smith.jpeg">
-                    </div>
-                    <div class="right">
-                        <div class="info">
-                            <p>Will Smith<span>@WillSmith</span></p>
-                            <time>23m</time>
-                        </div>
-                        <div class="message">
-                            <p>Still one of my favourite movies.</p>
-                            <div class="iframe-container">
-                                <iframe src="https://www.youtube.com/embed/aoyV49FfjOU" gesture="media" allow="encrypted-media" allowfullscreen="" frameborder="0"></iframe>
-                            </div>
-                        </div>
-                        <div class="btns">
-                            <button class="blue"><i class="far fa-comment"></i>12</button>
-                            <button class="green"><i class="fas fa-retweet"></i>32</button>
-                            <button class="red"><i class="far fa-heart"></i>64</button>
-                            <button class="blue"><i class="fas fa-ellipsis-h"></i></button>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
+
                 <template data-template="tweet-template">
                     <div class="tweet">
                         <div class="left">
@@ -383,84 +322,31 @@
                         </div>
                         <div class="right">
                             <div class="info">
-                                <p class="profile-name"><span class="profile-id">@albusdumb</span></p>
+                                <p class="profile-name"><span class="profile-id"></span></p>
                                 <time class="tweet-time"></time>
                             </div>
-                            <div class="message">
-                                
+                            <div class="message tweet-text">
+                                <img src="" class="post-img">
                                 
                             </div>
                             <div class="btns">
                                 <button class="blue"><i class="far fa-comment"></i>12</button>
                                 <button class="green"><i class="fas fa-retweet"></i>45</button>
-                                <button class="red"><i class="far fa-heart"></i>73</button>
+                                <button class="red like-button"><i class="far fa-heart"></i><span class="like-count"></span></button>
                                 <button class="blue"><i class="fas fa-ellipsis-h"></i></button>
                             </div>
                         </div>
                     </div>
                 </template>
-                <footer>
-                    <i class="fab fa-twitter"></i>
-                    <button>Load More</button>
-                </footer>
+
             </div>
             <div id="right">
                 <div class="search-container">
                     <div class="search-input">
-                        <input id="search" type="text" placeholder="Search Twitter" autocomplete="off">
+                        <input id="search" type="text" placeholder="Search Posts" autocomplete="off">
                         <i class="fas fa-search"></i>
                     </div>
-                    <div class="search-results">
-                        <div class="result">
-                            <p>youtube</p>
-                        </div>
-                        <div class="result">
-                            <p>youtuber dog</p>
-                        </div>
-                        <div class="result">
-                            <p>youtube music</p>
-                        </div>
-                        <hr>
-                        <div class="result">
-                            <img src="https://pbs.twimg.com/profile_images/1042095789894295552/2xCUFmgU_normal.jpg">
-                            <div class="right">
-                                <p>YouTube Gaming</p>
-                                <span>@YouTubeGaming</span>
-                            </div>
-                        </div>
-                        <div class="result">
-                            <img src="https://pbs.twimg.com/profile_images/1148327441527689217/1QpS06D6_normal.png">
-                            <div class="right">
-                                <p>YouTube</p>
-                                <span>@YouTube</span>
-                            </div>
-                        </div>
-                        <div class="result">
-                            <img src="https://pbs.twimg.com/profile_images/1148364735034691585/OVoeKZYC_normal.png">
-                            <div class="right">
-                                <p>YouTube Creators</p>
-                                <span>@YTCreators</span>
-                            </div>
-                        </div>
-                        <div class="result">
-                            <img src="https://pbs.twimg.com/profile_images/1148267294004600832/Vibmuz25_normal.png">
-                            <div class="right">
-                                <p>YouTube TV</p>
-                                <span>@youtubemusic</span>
-                            </div>
-                        </div>
-                        <div class="result">
-                            <img src="https://pbs.twimg.com/profile_images/1148296104611635201/VlnAnBaz_normal.jpg">
-                            <div class="right">
-                                <p>YouTube Music</p>
-                                <span>@youtubemusic</span>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="result">
-                            <p>Go to @YouTube</p>
-                        </div>
-                    </div>
+
                 </div>
                 <section>
                     <header>
@@ -545,6 +431,7 @@
         </div>
         <!-- <script src="../js/suggestion.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js" integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuidv4.min.js" integrity="sha512-BCMqEPl2dokU3T/EFba7jrfL4FxgY6ryUh4rRC9feZw4yWUslZ3Uf/lPZ5/5UlEjn4prlQTRfIPYQkDrLCZJXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script src="../js/feed.js"></script>
 </body>

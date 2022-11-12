@@ -15,6 +15,10 @@ const mongoose = require('mongoose');
 const axios = require('axios');
 const path = require('path');
 const fs = require('fs');
+var multer = require('multer');
+const { GridFsStorage } = require('multer-gridfs-storage');
+// const Grid = require('gridfs-stream');
+// const methodOverride = require('method-override');
 
 // app.use(express.static(path.join(__dirname, 'src')));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -53,10 +57,159 @@ app.get('/api/user/data', auth, async(req, res) => {
     }
 });
 
+//creating bucket
+let bucket;
+mongoose.connection.on("connected", () => {
+    var client = mongoose.connections[0].client;
+    var db = mongoose.connections[0].db;
+    bucket = new mongoose.mongo.GridFSBucket(db, {
+        bucketName: "uploads"
+    });
+    console.log(bucket);
+});
+
+// storage engine
+const storage = new GridFsStorage({
+    url: process.env.MONGODB_URL,
+    file: (req, file) => {
+        return new Promise((resolve, reject) => {
+            const filename = file.originalname;
+            const fileInfo = {
+                filename: filename,
+                bucketName: 'uploads'
+            };
+            resolve(fileInfo);
+        });
+    }
+});
+
+const upload = multer({ storage });
+
+app.post('/api/post/create', auth, async(req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    try {
+        const post = new Post({
+            user: req.user._id,
+            msg: req.body.msg,
+            time: req.body.time,
+            username: req.body.username,
+            name: req.body.name,
+            pic: req.body.pic,
+            picType: req.body.picType,
+        });
+        await post.save();
+        res.json(post);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+app.post('/api/post/imgcreate', auth, upload.single('file'), async(req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    // console.log(req.file);
+    try {
+        const post = new Post({
+            user: req.user._id,
+            msg: req.body.msg,
+            time: req.body.time,
+            username: req.body.username,
+            name: req.body.name,
+            img: req.file.id,
+            imgType: req.file.contentType,
+            pic: req.body.pic,
+            picType: req.body.picType,
+        });
+        await post.save();
+        post.file = req.file;
+        res.json(post);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+app.post('/api/user/pic', auth, upload.single('file'), async(req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    // console.log(req.file);
+    try {
+        let userModel = await User.findOneAndUpdate({ number: req.user.number }, { $set: { pic: req.file.id, picType: req.file.contentType } });
+        userModel.file = req.file;
+        res.json(userModel);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+app.get("/api/files/get/:id", (req, res) => {
+    const id = req.params.id;
+    console.log(typeof id);
+    console.log(mongoose.Types.ObjectId(id));
+    bucket.openDownloadStream(mongoose.Types.ObjectId(id)).pipe(res);
+});
+
+app.get('/api/post/get', auth, async(req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    try {
+        const posts = await Post.find({ user: req.user._id });
+        res.json(posts);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+app.get('/api/post/getall', auth, async(req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    try {
+        const posts = await Post.find();
+        res.json(posts);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+app.post('/api/post/incrementlikes', auth, async(req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    try {
+        const post = await Post.findOne({ _id: req.body.postid });
+        post.likecount = post.likecount + 1;
+        post.likes.push(req.user._id);
+        await post.save();
+        res.json(post);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
 app.post('/api/user/complain', complainUser);
 
 app.get('/complaints', (req, res) => {
     res.sendFile(__dirname + '/public/views/form.html');
+})
+
+app.get('/emergency', (req, res) => {
+    res.sendFile(__dirname + '/public/views/people.html');
+
+})
+
+app.get('/profile', (req, res) => {
+    res.sendFile(__dirname + '/public/views/personal.html');
 })
 
 app.get('/login', auth, (req, res) => {
@@ -71,12 +224,24 @@ app.get('/home', (req, res) => {
     res.sendFile(__dirname + '/public/views/home.html');
 });
 
-app.get('/profile', auth, (req, res) => {
+app.get('/feed', auth, (req, res) => {
     if (!req.isAuth) {
         res.redirect('/login');
         return;
     }
-    res.sendFile(__dirname + '/public/views/profile2.html');
+    res.sendFile(__dirname + '/public/views/feed.html');
+});
+
+app.get('/calender', (req, res) => {
+    res.sendFile(__dirname + '/public/views/index.html');
+});
+
+app.get('/map', (req, res) => {
+    res.sendFile(__dirname + '/public/views/map.html');
+});
+
+app.get('/about', (req, res) => {
+    res.sendFile(__dirname + '/public/views/about.html');
 });
 
 // app.get('/register', (req, res) => {
