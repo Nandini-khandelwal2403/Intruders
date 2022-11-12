@@ -1,0 +1,87 @@
+body>header {
+    background: url("https://source.unsplash.com/2560x1440/daily") center/cover;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    left: 280px;
+    top: 0;
+    /* margin-left: 280px; */
+}
+
+body>header .wrapper {
+    position: relative;
+    padding-left: 30px;
+}
+
+body>header .top {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+}
+
+body>header .top img {
+    width: 72px;
+    height: 72px;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+body>header .top .user {
+    margin-left: 15px;
+    color: #fff;
+    text-shadow: 0 2px 5px black;
+}
+
+body>header .top .user h2 {
+    margin: 0;
+    font-weight: 400;
+}
+
+body>header .top .user p {
+    margin: 0;
+    opacity: 0.5;
+}
+
+body>header .bottom {
+    display: flex;
+    align-items: center;
+}
+
+body>header .bottom a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 5px 10px;
+    margin-right: 15px;
+    text-shadow: 0 2px 5px black;
+}
+
+body>header .bottom a p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+body>header .bottom a h3 {
+    margin: 0;
+    font-weight: 400;
+}
+
+body>header .bottom a:hover {
+    box-shadow: inset 0 -4px 0 #fff;
+}
+
+body>header:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 125px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6) 90%);
+}
+
+body>header.nav-closed {
+    margin-left: 64px;
+}
