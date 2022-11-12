@@ -11,7 +11,7 @@ html {
     box-sizing: inherit;
   }
   nav {
-    background-color: rgb(219, 230, 244);
+    background-color: rgb(249, 251, 253);
     display: flex;
     padding: 1% 4%;
     justify-content: space-between;
@@ -191,7 +191,9 @@ html {
     position: relative;
     /* overflow-x: hidden; */
   }
-  
+  .image{
+    /* display: flex; */
+  }
   .body-image {
     border-radius: 200%;
     box-shadow: 5px 10px 75px rgba(0, 0, 0, .4);
@@ -211,6 +213,7 @@ html {
     right: 15px;
     top: -97px;
     width: 40px;
+   
   }
   
   .body-stats {
