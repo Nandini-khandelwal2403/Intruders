@@ -43,6 +43,12 @@ const user = new mongoose.Schema({
     posts: {
         type: Array,
     },
+    pic: {
+        type: String,
+    },
+    picType: {
+        type: String,
+    },
     token: {
         type: String
     },

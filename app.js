@@ -15,6 +15,10 @@ const mongoose = require('mongoose');
 const axios = require('axios');
 const path = require('path');
 const fs = require('fs');
+var multer = require('multer');
+const { GridFsStorage } = require('multer-gridfs-storage');
+// const Grid = require('gridfs-stream');
+// const methodOverride = require('method-override');
 
 // app.use(express.static(path.join(__dirname, 'src')));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -53,6 +57,34 @@ app.get('/api/user/data', auth, async(req, res) => {
     }
 });
 
+//creating bucket
+let bucket;
+mongoose.connection.on("connected", () => {
+    var client = mongoose.connections[0].client;
+    var db = mongoose.connections[0].db;
+    bucket = new mongoose.mongo.GridFSBucket(db, {
+        bucketName: "uploads"
+    });
+    console.log(bucket);
+});
+
+// storage engine
+const storage = new GridFsStorage({
+    url: process.env.MONGODB_URL,
+    file: (req, file) => {
+        return new Promise((resolve, reject) => {
+            const filename = file.originalname;
+            const fileInfo = {
+                filename: filename,
+                bucketName: 'uploads'
+            };
+            resolve(fileInfo);
+        });
+    }
+});
+
+const upload = multer({ storage });
+
 app.post('/api/post/create', auth, async(req, res) => {
     if (!req.isAuth) {
         res.redirect('/login');
@@ -65,12 +97,62 @@ app.post('/api/post/create', auth, async(req, res) => {
             time: req.body.time,
             username: req.body.username,
             name: req.body.name,
+            pic: req.body.pic,
+            picType: req.body.picType,
         });
         await post.save();
         res.json(post);
     } catch (error) {
         console.log(error);
     }
+});
+
+app.post('/api/post/imgcreate', auth, upload.single('file'), async(req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    // console.log(req.file);
+    try {
+        const post = new Post({
+            user: req.user._id,
+            msg: req.body.msg,
+            time: req.body.time,
+            username: req.body.username,
+            name: req.body.name,
+            img: req.file.id,
+            imgType: req.file.contentType,
+            pic: req.body.pic,
+            picType: req.body.picType,
+        });
+        await post.save();
+        post.file = req.file;
+        res.json(post);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+app.post('/api/user/pic', auth, upload.single('file'), async(req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
+    // console.log(req.file);
+    try {
+        let userModel = await User.findOneAndUpdate({ number: req.user.number }, { $set: { pic: req.file.id, picType: req.file.contentType } });
+        userModel.file = req.file;
+        res.json(userModel);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
+app.get("/api/files/get/:id", (req, res) => {
+    const id = req.params.id;
+    console.log(typeof id);
+    console.log(mongoose.Types.ObjectId(id));
+    bucket.openDownloadStream(mongoose.Types.ObjectId(id)).pipe(res);
 });
 
 app.get('/api/post/get', auth, async(req, res) => {

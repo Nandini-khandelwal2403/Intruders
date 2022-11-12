@@ -38,6 +38,18 @@ const post = new mongoose.Schema({
         type: Number,
         default: 0
     },
+    img: {
+        type: String,
+    },
+    imgType: {
+        type: String,
+    },
+    pic: {
+        type: String,
+    },
+    picType: {
+        type: String,
+    },
 }, { minimize: false });
 
 module.exports = Post = mongoose.model('post', post);

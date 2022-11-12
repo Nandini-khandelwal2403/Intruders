@@ -31,7 +31,7 @@
             <div class="sidebar-section sidebar-profile pt-4 pb-4">
                 <div class="profile-picture">
                     <div class="picture-wrapper rounded-circle ml-auto mr-auto">
-                        <img src="https://www.magic931.com.au/assets/docs/Jon_Snow.PNG?1543200080" class="img-fluid" alt="">
+                        <img src="https://www.magic931.com.au/assets/docs/Jon_Snow.PNG?1543200080" class="img-fluid profile-pic" alt="">
                     </div>
                     <span class="profile-alert"></span>
                     <div class="profile-details text-center mt-2">
@@ -252,9 +252,10 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="d-flex align-items-center">
+                                <a href="#" class="d-flex align-items-center" onclick="changeDP()">
                                     <i class="fas fa-cog"></i>
                                     <span class="flex-fill">Settings</span>
+                                    <input type="file" id="pic-input" hidden/>
                                 </a>
                             </li>
                             <li>
@@ -272,9 +273,11 @@
             <div id="timeline">
                 <div class="new-tweet">
                     <textarea placeholder="What's happening?" id="newPostMsg"></textarea>
+                    <img src="" class="new-post-img">
                     <div class="btns">
                         <div class="btn">
-                            <button><i class="fas fa-image"></i></button>
+                            <button onclick="document.getElementById('files-input').click();"><i class="fas fa-image"></i></button>
+                            <input type="file" id="files-input" hidden/>
                         </div>
                         <div class="btn">
                             <button><i class="fas fa-film"></i></button>
@@ -323,7 +326,7 @@
                                 <time class="tweet-time"></time>
                             </div>
                             <div class="message tweet-text">
-                                
+                                <img src="" class="post-img">
                                 
                             </div>
                             <div class="btns">
@@ -340,7 +343,7 @@
             <div id="right">
                 <div class="search-container">
                     <div class="search-input">
-                        <input id="search" type="text" placeholder="Search Twitter" autocomplete="off">
+                        <input id="search" type="text" placeholder="Search Posts" autocomplete="off">
                         <i class="fas fa-search"></i>
                     </div>
 
@@ -428,6 +431,7 @@
         </div>
         <!-- <script src="../js/suggestion.js"></script> -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js" integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuidv4.min.js" integrity="sha512-BCMqEPl2dokU3T/EFba7jrfL4FxgY6ryUh4rRC9feZw4yWUslZ3Uf/lPZ5/5UlEjn4prlQTRfIPYQkDrLCZJXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script src="../js/feed.js"></script>
 </body>
