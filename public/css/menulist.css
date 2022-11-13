@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(126, 130, 143, 0.7), rgba(202, 188, 204, 0.7)), url(../images/indian.jpeg);
+    background-image: linear-gradient(rgba(126, 130, 143, 0.7), rgba(202, 188, 204, 0.7));
     background-position: center;
     background-size: cover;
     position: relative;
@@ -46,7 +47,7 @@ nav img {
     content: '';
     width: 0%;
     height: 2px;
-    background: #dd09e0;
+    background: #b10723;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -59,7 +60,7 @@ nav img {
 body {
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(3, 14, 59, 0.7), rgba(44, 4, 49, 0.7)), url(../images/food.jpg);
+    background-image: linear-gradient(rgba(3, 14, 59, 0.7), rgba(44, 4, 49, 0.7));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,9 +109,11 @@ h1 {
     padding-bottom: 15px;
     font-size: 50px;
     background-color: rgba(214, 211, 219, 0.526);
-    margin-left: 320px;
+    /* margin-left: 320px; */
+    margin: auto;
     width: 50%;
     color: rgb(33, 70, 98);
+    text-align: center;
 }
 
 table {
@@ -129,4 +132,19 @@ table {
 tr,
 td {
     padding: 12px 15px;
+    border-bottom: 1px solid #333;
+    transition: 0.5s;
+}
+
+td:hover {
+    background: #333;
+}
+
+hr {
+    border: 1px solid #333;
+}
+
+.weekly {
+    display: flex;
+    margin-bottom: 5rem;
 }

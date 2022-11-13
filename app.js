@@ -249,7 +249,7 @@ app.get('/complaints', (req, res) => {
     res.sendFile(__dirname + '/public/views/form.html');
 })
 
-app.get('/emergency', (req, res) => {
+app.get('/people', (req, res) => {
     res.sendFile(__dirname + '/public/views/people.html');
 
 })
@@ -270,7 +270,7 @@ app.get('/profile/:id', auth, (req, res) => {
     res.sendFile(__dirname + '/public/views/profile.html');
 })
 
-app.get('/menulist', (req, res) => {
+app.get('/menu', (req, res) => {
     res.sendFile(__dirname + '/public/views/menulist.html');
 })
 

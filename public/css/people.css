@@ -27,6 +27,9 @@ nav {
     padding: 1% 4%;
     justify-content: space-between;
     align-items: center;
+    background-image: linear-gradient(rgba(67, 12, 113, 0.7), rgba(25, 0, 29, 0.7));
+    background-position: center;
+    background-size: cover;
 }
 
 nav img {
@@ -108,7 +111,7 @@ input {
     content: '';
     width: 0%;
     height: 2px;
-    background: #dd09e0;
+    background: #b10723;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -137,6 +140,8 @@ body {
     width: 100%;
     height: auto;
     text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 .tree ul {

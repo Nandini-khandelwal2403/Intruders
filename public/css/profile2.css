@@ -4,6 +4,7 @@ body>header {
     align-items: center;
     position: absolute;
     width: 100vw;
+    height: 25vh;
     left: 280px;
     top: 0;
     /* margin-left: 280px; */
