@@ -255,11 +255,23 @@ app.get('/emergency', (req, res) => {
 })
 
 app.get('/profile', auth, (req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
     res.redirect('/profile/' + req.user.number);
 })
 
-app.get('/profile/:id', (req, res) => {
+app.get('/profile/:id', auth, (req, res) => {
+    if (!req.isAuth) {
+        res.redirect('/login');
+        return;
+    }
     res.sendFile(__dirname + '/public/views/profile.html');
+})
+
+app.get('/menulist', (req, res) => {
+    res.sendFile(__dirname + '/public/views/menulist.html');
 })
 
 app.get('/login', (req, res) => {

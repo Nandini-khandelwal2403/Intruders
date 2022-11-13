@@ -1,8 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 .header {
     min-height: 100vh;
     width: 100%;
@@ -55,7 +56,7 @@ nav img {
     width: 100%;
 }
 
-body{
+body {
     width: 100%;
     min-height: 100vh;
     background-image: linear-gradient(rgba(3, 14, 59, 0.7), rgba(44, 4, 49, 0.7)), url(../images/food.jpg);
@@ -64,36 +65,45 @@ body{
     align-items: center;
     line-height: 1.5s;
 }
-.food{
+
+.food {
     width: 1100px;
     max-width: 100%;
     margin: 0 auto;
 }
-.food-row{
+
+.food-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.card{
-    background: rgb(95, 118, 127);
-    margin: 10px 20px;
-    flex: 1 1 21rem   ;
-    box-shadow: 0 0 15px rgba(244, 237, 237, 0.4);
-    padding: 10px 20px;
-    border-radius: 12px 12px 12px 12px;
 
+.card {
+    background: rgb(33, 70, 98);
+    margin: 10px 20px;
+    flex: 1 1 21rem;
+    box-shadow: 0 0 15px rgba(244, 237, 237, 0.4);
+    padding: 10px 45px;
+    border-radius: 12px 12px 12px 12px;
 }
-.card h4{
-     font-size: 1.3rem;
-     text-transform: uppercase;
-     margin: 10px 0;
-     color: aliceblue;
-}
-.card ul{
+
+.card h4 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin: 10px 0;
     color: aliceblue;
 }
-h1
-{
+
+li {
+    padding-bottom: 5px;
+    list-style-type: square;
+}
+
+.card ul {
+    color: aliceblue;
+}
+
+h1 {
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 50px;
@@ -101,22 +111,22 @@ h1
     margin-left: 320px;
     width: 50%;
     color: rgb(33, 70, 98);
-    
 }
-table{
+
+table {
     width: 20%;
     border-collapse: collapse;
     border-spacing: 0;
-    border-radius: 12px 12px 12px 12px ;
+    border-radius: 12px 12px 12px 12px;
     overflow: hidden;
-    box-shadow: 0 2px 12px rgba(32,32,32,3);
+    box-shadow: 0 2px 12px rgba(32, 32, 32, 3);
     margin-left: 100px;
-    background:  rgb(103, 130, 151);
+    background: rgb(103, 130, 151);
     text-align: center;
     color: #fff;
-    
 }
-tr,td{
-    padding: 12px 15px;
 
+tr,
+td {
+    padding: 12px 15px;
 }
