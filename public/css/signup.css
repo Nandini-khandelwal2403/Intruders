@@ -20,7 +20,7 @@ html {
 
 .btn-larger {
     padding: 15px 40px !important;
-    border: 0px solid #8e279e !important;
+    border: 0px solid #161334 !important;
     border-radius: 0px !important;
     text-transform: uppercase;
     font-family: 'Dosis', sans-serif;
@@ -77,13 +77,13 @@ fieldset[disabled] .btn-larger.active {
 .btn-color {
     color: #fff;
     background-size: 200% auto;
-    background-color: #320c38 !important;
+    background-color: #161334 !important;
 }
 
 div#form {
     color: #fff;
     background-attachment: scroll;
-    background: url("../images/iit-bhilai-04.jpg");
+    /* background: url("../images/iit-bhilai-04.jpg"); */
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -119,7 +119,7 @@ div#form {
 #userform .nav-tabs.nav-justified>li>a {
     text-transform: uppercase;
     font-size: 20px;
-    color: #320c38;
+    color: #161334;
     background-color: rgba(90, 90, 90, 0.5);
 }
 
@@ -127,7 +127,7 @@ div#form {
 #userform .nav-tabs.nav-justified>.active>a:hover,
 #userform .nav-tabs.nav-justified>.active>a:focus {
     border: 0;
-    background: #320c38;
+    background: #161334;
     color: white;
     border-radius: 0;
 }
@@ -150,7 +150,7 @@ div#form {
 }
 
 #userform .nav-tabs.nav-justified>li>a:hover {
-    background: #320c38;
+    background: #161334;
     color: #FFF;
     border-radius: 0;
     border: 0;
@@ -162,7 +162,7 @@ div#form {
 #userform .nav-tabs>li.active>a,
 #userform .nav-tabs>li.active>a:hover,
 #userform .nav-tabs>li.active>a:focus {
-    color: #320c38;
+    color: #161334;
     cursor: default;
     background-color: transparent;
     border: 0;
@@ -179,7 +179,7 @@ div#form {
         transition: all .6s;
     }
     #userform .nav-tabs.nav-justified>li>a:hover {
-        background-color: #320c38;
+        background-color: #161334;
         border-color: transparent;
         border: 0;
         -webkit-transition: all .6s;
@@ -264,7 +264,7 @@ div#form {
 
 #userform #signup .form-group label .req {
     margin: 2px;
-    color: #320c38;
+    color: #161334;
 }
 
 #userform #signup .form-group label.active {
@@ -302,7 +302,7 @@ div#form {
 
 #userform #login .form-group label .req {
     margin: 2px;
-    color: #320c38;
+    color: #161334;
 }
 
 #userform #login .form-group label.active {

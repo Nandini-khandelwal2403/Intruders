@@ -107,9 +107,9 @@ function createPost() {
                 const clone = template.content.cloneNode(true);
                 clone.querySelector('.tweet').setAttribute('id', res.data._id);
                 clone.querySelector('.profile-dp').src = window.userpicurl;
-                clone.querySelector('.profile-name').innerHTML = window.name + ' <span class="profile-id">@' + window.username + '</span>';
+                clone.querySelector('.profile-name').innerHTML = window.uname + ' <span class="profile-id">@' + window.username + '</span>';
                 // clone.querySelector('.profile-id').innerHTML = '@' + window.username;
-                clone.querySelector('.tweet-text').innerHTML = res.data.msg + '<br><br><img src="' + URL.createObjectURL(allFiles[file].file) + '" alt="Image" class="tweet-img">';
+                clone.querySelector('.tweet-text').innerHTML = '<p>' + res.data.msg + '<p>' + '<br><br><img src="' + URL.createObjectURL(allFiles[file].file) + '" alt="Image" class="tweet-img">';
 
                 clone.querySelector('.tweet-time').innerHTML = new Date(parseInt(res.data.time)).toString().substring(4, 21);
                 clone.querySelector('.like-count').innerHTML = res.data.likecount;
@@ -135,9 +135,9 @@ function createPost() {
             const clone = template.content.cloneNode(true);
             clone.querySelector('.tweet').setAttribute('id', res.data._id);
             clone.querySelector('.profile-dp').src = window.userpicurl;
-            clone.querySelector('.profile-name').innerHTML = window.name + ' <span class="profile-id">@' + window.username + '</span>';
+            clone.querySelector('.profile-name').innerHTML = window.uname + ' <span class="profile-id">@' + window.username + '</span>';
             // clone.querySelector('.profile-id').innerHTML = '@' + window.username;
-            clone.querySelector('.tweet-text').innerHTML = res.data.msg;
+            clone.querySelector('.tweet-text').innerHTML = '<p>' + res.data.msg + '<p>';
             clone.querySelector('.tweet-time').innerHTML = new Date(parseInt(res.data.time)).toString().substring(4, 21);
             clone.querySelector('.like-count').innerHTML = res.data.likecount;
             clone.querySelector('.like-count').setAttribute('id', res.data._id + '-likecount');

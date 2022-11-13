@@ -7,14 +7,14 @@
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(3, 14, 59, 0.7), rgba(44, 4, 49, 0.7)), url(../images/iit-bhilai-04.jpg);
+    background-image: url(../images/iitbh1.jpeg);
     background-position: center;
     background-size: cover;
     position: relative;
 }
 
 nav {
-    display: flex;
+    display: flex !important;
     padding: 1% 4%;
     justify-content: space-between;
     align-items: center;
@@ -46,7 +46,7 @@ nav img {
     content: '';
     width: 0%;
     height: 2px;
-    background: #dd09e0;
+    background: #2e22ad;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -65,15 +65,17 @@ nav img {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    text-shadow: #1b041c;
 }
 
 .text-box h1 {
     font-size: 62px;
+    color: #fff;
 }
 
 .text-box p {
     margin: 10px 0 40px;
-    font-size: 14px;
+    font-size: 34px;
     color: #fff;
 }
 
@@ -91,7 +93,7 @@ nav img {
 
 .hero-btn:hover {
     border: 1px solid #1b041c;
-    background: #2f0630;
+    background: #2c2c2c;
     transition: 0.5;
 }
 
